@@ -36,9 +36,9 @@ def parse_item(item) -> str:
         and "retailPrice" in item["saleInfo"]
     ):
         return (
-            f"{book_count},{item['volumeInfo']['categories'][0]},"
-            f"{item['volumeInfo']['title']},{item['volumeInfo']['authors'][0]},"
-            f"${item['saleInfo']['retailPrice']['amount']},{random_date()}"
+            f"{book_count}|{item['volumeInfo']['categories'][0]}|"
+            f"{item['volumeInfo']['title']}|{item['volumeInfo']['authors'][0]}|"
+            f"${item['saleInfo']['retailPrice']['amount']}|{random_date()}"
         )
     return None
 
@@ -60,9 +60,6 @@ def random_date():
     random_number_of_days = random.randrange(time_between_dates.days)
     return start + datetime.timedelta(days=random_number_of_days)
 
-def loan_string():
-    return f'{random.randint(1,len(book_list))},{random_date()},{random_date()},{random.randint(1111,2222)}'
-
 def generate_books(keywords):
     for keyword in keywords:
         book_data = get_book_data(
@@ -73,7 +70,8 @@ def generate_books(keywords):
 
 def generate_loans(amount):
     for i in range(1, amount):
-        loan_list.append(loan_string())
+        loan_string = f'{random.randint(1,len(book_list))}|{random_date()}|{random_date()}|{random.randint(1111,2222)}'
+        loan_list.append(loan_string)
     save_file("Loan_Reservation_History.txt", loan_list)
     
 
