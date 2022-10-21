@@ -1,7 +1,9 @@
 import random
 import datetime
+from datetime import date
 import time
 import requests
+from dateutil.relativedelta import relativedelta
 
 book_list = []
 loan_list = []
@@ -55,12 +57,13 @@ def save_file(filename, array):
         file_.write("\n".join(array))
 
 def generate_date(reserve=None):
+    today = date.today()
     if reserve:
-        start = datetime.date(2022, 11, 1)
-        end = datetime.date(2023, 2, 20)
+        start = today + relativedelta(months=+1)
+        end = today + relativedelta(months=+3)
     else:
-        start = datetime.date(2019, 2, 1)
-        end = datetime.date(2022, 10, 20)
+        start = today - relativedelta(months=+2)
+        end = today
         
     random_number_of_days = random.randrange((end - start).days)
     return start + datetime.timedelta(days=random_number_of_days)

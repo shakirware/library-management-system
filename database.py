@@ -1,4 +1,5 @@
 import sqlite3
+import os.path
 
 class Database:
     """Interacts with an sqlite database."""
@@ -13,10 +14,15 @@ class Database:
         self.filename = filename
         self.script = script
         self.connect()
+        
         with open(self.script) as sql:
             sql_script = sql.read()
             self.execute_script(sql_script)
 
+        if not self.query_database('SELECT COUNT(*) FROM BOOK')[0][0]:
+            self.populate_loan_table()
+            self.populate_book_table()
+            
     def connect(self):
         """Opens a connection to the sqlite database."""
         self.conn = sqlite3.connect(self.filename);
@@ -42,7 +48,7 @@ class Database:
                     'purchase_date': book_string[5]
                 }
                 books.append(book)
-        self.populate_book_table(books)
+        return books
         
     def parse_loan_file(self, text_file):
         loans = []
@@ -57,9 +63,10 @@ class Database:
                     'member_id': loan_string[4]
                 }
                 loans.append(loan)
-        self.populate_loan_table(loans)
+        return loans
     
-    def populate_loan_table(self, loans):
+    def populate_loan_table(self):
+        loans = self.parse_loan_file('Loan_Reservation_History.txt')
         for loan in loans:
             self.cursor.execute(
                 "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
@@ -68,8 +75,9 @@ class Database:
         self.conn.commit()
             
                 
-    def populate_book_table(self, books):
+    def populate_book_table(self):
         """The database tables are populated with records from the text file."""
+        books = self.parse_book_file('Book_Info.txt')
         for book in books:
             author_exist = self.cursor.execute("SELECT 1 FROM authors WHERE authorName = ?", (book['author'],)).fetchone()
             if not author_exist:
@@ -89,9 +97,3 @@ class Database:
         return self.cursor.execute(query).fetchall()
      
 
-def main():
-    db = Database()
-    db.parse_book_file('Book_Info.txt')
-    db.parse_loan_file('Loan_Reservation_History.txt')
-    
-main()

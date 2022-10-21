@@ -1,6 +1,4 @@
-import sqlite3
 from database import Database
-
 
 class Search(Database):
     def __init__(self, parent):
@@ -13,9 +11,9 @@ class Search(Database):
                     book.title,
                     book.genre,
                     authors.authorname
-            FROM   bookcopies
+            FROM   bookCopies
             JOIN book
-                ON bookcopies.id = book.id
+                ON bookCopies.bookID = book.id
             JOIN authors
                 ON book.authorid = authors.id
             WHERE  book.title LIKE '%{title}%'; 
@@ -31,13 +29,9 @@ class Search(Database):
                     authors.authorname
             FROM   bookcopies
             JOIN book
-                ON bookcopies.id = book.id
+                ON bookcopies.bookID = book.id
             JOIN authors
                 ON book.authorid = authors.id
             WHERE  authors.authorname LIKE '%{author}%'; 
         """
         )
-
-
-db = Database()
-print(Search(db).book_title_search("design"))
