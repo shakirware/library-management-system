@@ -1,145 +1,143 @@
-1|Biography & Autobiography|Harry|Katie Nicholl|$3.99|2019-12-15
-2|Biography & Autobiography|Meghan and Harry|Lady Colin Campbell|$9.99|2021-03-16
-3|Biography & Autobiography|Summary of Lady Colin Campbell's Meghan and Harry|Everest Media,|$2.99|2021-06-08
-4|Juvenile Fiction|Harry Loves Mud|Chris Cowlin|$0.99|2021-02-28
-5|Biography & Autobiography|Prince Harry: The Inside Story|Duncan Larcombe|$2.99|2020-04-07
-6|Performing Arts|The Binge Watcher’s Guide to the Harry Potter Films - An Unofficial Companion|Cecilia Tan|$8.99|2019-09-26
-7|Literary Criticism|The Making of the Potterverse|Scott Thomas|$14.99|2021-10-25
-8|Biography & Autobiography|The Book of Harry: A Celebration of Harry Styles|Charlotte McLaren|$6.99|2021-07-20
-9|Fiction|Flight of Eagles|Jack Higgins|$5.49|2021-11-26
-10|Fiction|Eagles Cove|Elke Sinclair|$2.99|2020-05-14
-11|Fiction|Double Eagles|Allen Smith|$4.92|2019-12-12
-12|Sports & Recreation|The Good, the Bad, & the Ugly: Philadelphia Eagles|Steve Silverman|$12.99|2021-02-17
-13|History|Dowding's Eagles|Norman Franks|$3.99|2022-01-16
-14|History|The Turkey and the Eagle|Caleb S. Rossiter|$11.83|2019-07-16
-15|Fiction|Eagle|Jack Hight|$3.99|2020-07-28
-16|Fiction|The Eagle|Jack Whyte|$6.39|2019-09-01
-17|Fiction|Invictus (Eagles of the Empire 15)|Simon Scarrow|$4.99|2022-02-10
-18|Nature|The Eagle Watchers|Ruth Tingay|$12.02|2022-02-01
-19|History|Hitler's 'Wonder' U-Boats|Jak P Mallmann Showell|$3.99|2020-06-19
-20|History|Ultra Versus U-Boats|Roy Conyers Nesbit|$3.99|2022-03-08
-21|History|U-Boats at War in 100 Objects, 1939–1945|Gordon Williamson|$9.99|2021-03-22
-22|Sports & Recreation|The Big Book of Wooden Boat Restoration|Thomas Larsson|$1.99|2020-06-11
-23|Transportation|Diesel Troubleshooter For Boats|Don Seddon|$10.39|2019-06-20
-24|Transportation|20th Century Passenger Flying Boats|Leslie Dawson|$14.99|2021-10-01
-25|History|Swift Boats at War in Vietnam|Guy Gugliotta|$21.99|2022-05-16
-26|Art|Drawing Boats and Ships|Yngve Edward Soderberg|$3.84|2020-05-08
-27|Transportation|The Classic Car Book|DK|$8.99|2021-02-05
-28|Sports & Recreation|Bond Cars|Jason Barlow|$7.99|2021-06-21
-29|Reference|How to Illustrate and Design Concept Cars|Adrian Dewey|$12.99|2019-11-15
-30|Juvenile Nonfiction|Cars of Legend|Jorge Lucendo|$3.25|2019-03-07
-31|Transportation|Cars of the Standard Motor Company|Phil Homer|$12|2022-04-08
-32|Games & Activities|Sports Cars Coloring Book for Kids 1|Nick Snels|$5.34|2021-04-22
-33|Technology & Engineering|Neighborhoods, People, and Community|Roger Ahlbrandt|$51.55|2021-11-21
-34|Biography & Autobiography|Remarkable People|Dan Walker|$4.99|2020-03-07
-35|Juvenile Nonfiction|The Sea Book|Charlotte Milner|$4.99|2021-12-01
-36|Juvenile Nonfiction|The Bee Book|Charlotte Milner|$4.99|2020-12-30
-37|Fiction|Half the World (Shattered Sea, Book 2)|Joe Abercrombie|$2.99|2021-05-01
-38|Science|The Northern Sea Route as a Shipping Lane|Tadeusz Pastusiak|$67.65|2022-08-26
-39|Fiction|The House in the Cerulean Sea|Travis Klune|$4.99|2021-03-23
-40|History|Iron Fist From The Sea|Douw Steyn|$14.99|2019-03-11
-41|Fiction|THE SEA ADVENTURES - Boxed Set: 20+ Maritime Novels & Tales of Seas and Sailors|Jack London|$0.49|2021-01-16
-42|History|The Real Cruel Sea|Richard Woodman|$4.99|2019-09-23
-43|Fiction|20,000 LEAGUES UNDER THE SEA (Illustrated)|Jules Verne|$0.49|2020-03-12
-44|Technology & Engineering|Encyclopedia of Ocean Engineering|Weicheng Cui|$458.25|2019-11-05
-45|Science|Pollution in the Black Sea|Konstantin Pokazeev|$74.65|2019-04-24
-46|Business & Economics|Blue Ocean Leadership (Harvard Business Review Classics)|W. Chan Kim|$6.02|2019-03-09
-47|Political Science|Routledge Handbook of National and Regional Ocean Policies|Biliana Cicin-Sain|$39.03|2020-04-17
-48|Science|Ask an Ocean Explorer|Jonathan Copley|$3.99|2022-04-20
-49|Fiction|Daughters of the Colder Ocean|Sheri Murphy|$3.5|2019-06-29
-50|Science|Rotating Hydraulics|Lawrence L.J. Pratt|$53.65|2019-03-13
-51|Business & Economics|Can’t We Just Print More Money?|Rupal Patel|$7.99|2019-10-31
-52|Games|The England Quiz Book|Adam Pearson|$5.49|2021-10-31
-53|History|The Medieval Foundations of England|G.O. Sayles|$27.51|2022-07-23
-54|Literary Criticism|An Imaginary England|Roger Ebbatson|$24.63|2021-04-28
-55|History|Sleep in Early Modern England|Sasha Handley|$18|2022-03-03
-56|Language Arts & Disciplines|The Study of Language in 17th-Century England|Vivian Salmon|$59.6|2021-12-03
-57|Study Aids|AQA GCSE History: Norman England, 1066-1100|Helena Clarke|$4.99|2022-07-16
-58|History|Building Magic|Owen Davies|$67.65|2019-02-15
-59|Juvenile Nonfiction|Look at That Building!|Scot Ritchie|$7.32|2021-07-18
-60|Crafts & Hobbies|Den Building|Jane Hewitt|$9.99|2021-12-22
-61|Business & Economics|Illustrated Building Pocket Book|Roxanna McDonald|$28.95|2020-06-06
-62|Technology & Engineering|Handbook of Green Building Design and Construction|Sam Kubba|$62.6|2020-12-10
-63|Architecture|Residential Architecture as Infrastructure|Stephen H. Kendall|$19.59|2020-06-11
-64|Sports & Recreation|Building Your Own Climbing Wall|Steve Lage|$17.99|2021-06-19
-65|Architecture|The Technology of Building Defects|John Hinks|$30.39|2021-01-28
-66|Business & Economics|Building Decentralized Trust|Victoria L. Lemieux|$67.65|2019-11-21
-67|Architecture|Building Surveyor’s Pocket Book|Melanie Smith|$13.11|2022-04-24
-68|Architecture|The Whole Building Handbook|Maria Block|$47.67|2022-08-04
-69|Mathematics|Buildings|Peter Abramenko|$28.09|2021-04-09
-70|Architecture|The Idea of Building|Steven Groak|$33.27|2022-05-16
-71|Architecture|Building for Well-Being|Traci Rose Rider|$33.27|2021-12-30
-72|Fiction|Salt Houses|Hala Alyan|$4.99|2021-04-06
-73|Literary Criticism|House of Fiction|Phyllis Richardson|$0.99|2021-08-07
-74|Biography & Autobiography|The Queen's Houses|Alan Titchmarsh|$10.99|2022-07-08
-75|Social Science|London Bridge and its Houses, c. 1209-1761|Dorian Gerhold|$14.99|2022-05-01
-76|Law|English Houses|Bruce Munro|$28.95|2020-10-11
-77|History|The Gentleman's House in the British Atlantic World 1680-1780|S. Hague|$36.49|2021-12-28
-78|Fiction|Orhan's Inheritance|Aline Ohanesian|$14.99|2020-01-10
-79|Juvenile Fiction|The Ash House|Angharad Walker|$4.68|2020-05-03
-80|Religion|The Houses That The Angles Do Not Enter - The strange ways of the angels and their kinds and the houses where angels of mercy do not go|Ukkashah Abdul Mannan|$4.51|2021-04-19
-81|Literary Criticism|Houses, Secrets, and the Closet|Gero Bauer|$0|2019-02-21
-82|Fiction|London|Edward Rutherfurd|$2.99|2019-11-23
-83|Business & Economics|An Economic History of London 1800-1914|Professor Michael Ball|$26.07|2021-01-07
-84|Transportation|The London, Midland and Scottish Railway Volume Five The London and Birmingham Railway|Stanley C. Jenkins|$12|2019-12-22
-85|History|The Wealth of Wives|Barbara A. Hanawalt|$10.83|2022-04-25
-86|Sports & Recreation|Tired of London, Tired of Life|Tom Jones|$7.99|2020-04-05
-87|Fiction|Rivers of London|Ben Aaronovitch|$4.99|2020-10-05
-88|Performing Arts|The London Stage 1950-1959|J. P. Wearing|$117.99|2020-11-17
-89|Fiction|The Note|Zoë Folbigg|$2.99|2021-02-10
-90|History|Letters of Note|Shaun Usher|$15.99|2020-10-08
-91|Literary Collections|More Letters of Note|Shaun Usher|$15.99|2021-01-04
-92|History|The New English Canaan of Thomas Morton with Introductory Matter and Notes|Thomas Morton|$1.99|2019-05-13
-93|Fiction|Funeral Note (Bob Skinner series, Book 22)|Quintin Jardine|$5.99|2020-04-19
-94|Fiction|The Note-Books of Samuel Butler|Samuel Butler|$1.99|2019-10-20
-95|Education|Teacher Notes|Mattie Sullivan|$6.28|2019-04-05
-96|Fiction|Note to Boy|Sue Clark|$0.99|2021-11-02
-97|Religion|The Catechetical Lectures of S. Cyril, Archbishop of Jerusalem, Translated, with Notes and Indices, Fourth Edition|Cyril of Jerusalem|$30.39|2021-07-04
-98|Fiction|A Note In Music|Rosamond Lehmann|$3.99|2019-06-10
-99|Fiction|Wall Street to France|Rianna Shaikh|$3.99|2020-08-27
-100|Young Adult Fiction|The Blood Series Book Bundle 1-8 (A Rejected Mates Vampire Shifter Dark Romance )|Tamara Rose Blodgett|$10.82|2022-03-06
-101|Business & Economics|Cultural and Creative Industries|Marta Peris-Ortiz|$74.65|2022-03-15
-102|Fiction|The Blood Series Book Bundle 4-6|Tamara Rose Blodgett|$6.31|2022-02-11
-103|Social Science|Rethinking the Chicano Movement|Marc Simon Rodriguez|$26.07|2019-11-20
-104|Law|A History of Alternative Dispute Resolution|Jerome T. Barrett|$40.99|2022-05-28
-105|Fiction|Wilds Rage|Bill Jacobsen|$4.99|2021-09-13
-106|Fiction|Taking Chances|Susan Lewis|$2.99|2021-04-23
-107|Juvenile Fiction|Goldilocks Breaks In|Joan Holub|$3.99|2020-07-14
-108|Fiction|Scenes of a Graphic Nature|Caroline O'Donoghue|$4.99|2022-02-04
-109|Fiction|Promising Young Women|Caroline O'Donoghue|$2.99|2021-08-29
-110|Self-Help|On Connection|Kae Tempest|$6.99|2021-09-04
-111|Poetry|Clarity & Connection|Yung Pueblo|$7.99|2021-02-09
-112|Computers|Automotive Software-Connected Services in Mobile Networks|Manfred Broy|$36.49|2019-03-18
-113|Psychology|Lost Connections|Johann Hari|$7.07|2019-02-04
-114|Art|Invisible Connections|Sita Popat|$26.07|2020-10-04
-115|Fiction|The Paris Connection|Lorraine Brown|$2.99|2020-11-28
-116|Fiction|The Missed Connection|Denise Williams|$1.66|2022-02-07
-117|Self-Help|Connection|Kristine Klussman|$10.74|2019-06-08
-118|Family & Relationships|The Lasting Connection|Michaela Thomas|$2.99|2019-08-21
-119|Fiction|The White House Connection (Sean Dillon Series, Book 7)|Jack Higgins|$5.49|2019-03-10
-120|Nature|The Book of Nature Connection|Jacob Rodenburg|$21.99|2022-04-26
-121|Psychology|The Mind-Gut Connection|Emeran Mayer|$7.99|2019-05-10
-122|Fiction|Love Connection|Camilla Isley|$2.99|2020-07-05
-123|Fiction|[Dis]Connected Volume 2|Michelle Halket|$7.17|2019-10-30
-124|Social Science|The Sciences’ Media Connection –Public Communication and its Repercussions|Simone Rödder|$95.65|2020-02-03
-125|Fiction|The Electric|Edward Hogan|$3.99|2022-05-15
-126|Technology & Engineering|Wind Energy Systems for Electric Power Generation|Manfred Stiebler|$67.65|2022-08-30
-127|Technology & Engineering|Electric Arc Welding and Related Studies|N. Parkin|$12.99|2019-03-15
-128|Business & Economics|From Vehicles To Grid To Electric Vehicles To Green Grid: Many A Little Makes A Miracle|Li Fuhuo|$39|2021-04-16
-129|Juvenile Nonfiction|A Ladybird Book: Electricity|Elizabeth Jenner|$5.99|2019-06-01
-130|Business & Economics|Automotive E-Mobility. Industry Analysis|Dennis Schindeldecker|$13.99|2020-03-16
-131|Technology & Engineering|Design of Rotating Electrical Machines|Juha Pyrhonen|$76.99|2019-06-04
-132|Mathematics|The Maths Book|DK|$7.99|2019-10-15
-133|Mathematics|Maths Ladder – 7|Lata Thergaonkar|$4.94|2021-07-05
-134|Education|Maths — No Problem! Collection of 6 Workbooks, Ages 10-11 (Key Stage 2)|Maths — No Problem!|$7.99|2022-05-16
-135|Study Aids|WJEC GCSE Maths Foundation: Mastering Mathematics Revision Guide|Keith Pledger|$5.99|2022-06-23
-136|Self-Help|The Power of Vedic Maths|Atul Gupta|$2.29|2022-01-04
-137|Science|The Physics Book|DK|$7.99|2021-06-24
-138|Medical|Basics of Medical Physics|Daniel Jirák|$7.15|2021-01-19
-139|Science|The CBM Physics Book|Bengt Friman|$74.65|2021-03-21
-140|Science|A Modern Introduction to Particle Physics|Fayyazuddin|$27.3|2021-06-18
-141|Science|The Physics of Atoms and Quanta|Hermann Haken|$48.4|2021-03-03
-142|Science|Some Mathematical Methods of Physics|Gerald Goertzel|$11.54|2019-11-09
-143|Science|Exploring Quantum Physics through Hands-on Projects|David Prutchi|$60.99|2020-04-14
-144|Fiction|The Missed Connection|Denise Williams|$1.66|2022-02-07
-145|Self-Help|Connection|Kristine Klussman|$10.74|2019-06-08
+1|Biography & Autobiography|Harry|Katie Nicholl|$3.99|2022-10-15
+2|Biography & Autobiography|Meghan and Harry|Lady Colin Campbell|$9.99|2019-02-15
+3|Biography & Autobiography|Summary of Lady Colin Campbell's Meghan and Harry|Everest Media,|$2.99|2022-09-10
+4|Juvenile Fiction|Harry Loves Mud|Chris Cowlin|$0.99|2021-06-02
+5|Fiction|Flight of Eagles|Jack Higgins|$5.49|2020-01-17
+6|Fiction|Eagles Cove|Elke Sinclair|$2.99|2021-10-24
+7|Fiction|Double Eagles|Allen Smith|$4.92|2022-10-19
+8|Sports & Recreation|The Good, the Bad, & the Ugly: Philadelphia Eagles|Steve Silverman|$12.99|2020-03-14
+9|History|Dowding's Eagles|Norman Franks|$3.99|2019-02-01
+10|History|The Turkey and the Eagle|Caleb S. Rossiter|$11.83|2020-02-22
+11|Fiction|Eagle|Jack Hight|$3.99|2019-09-04
+12|Fiction|Invictus (Eagles of the Empire 15)|Simon Scarrow|$4.99|2020-11-10
+13|Nature|The Eagle Watchers|Ruth Tingay|$12.02|2020-10-20
+14|Fiction|Praetorian (Eagles of the Empire 11)|Simon Scarrow|$5.99|2020-03-14
+15|History|Hitler's 'Wonder' U-Boats|Jak P Mallmann Showell|$3.99|2021-10-11
+16|History|Ultra Versus U-Boats|Roy Conyers Nesbit|$3.99|2020-10-03
+17|History|U-Boats at War in 100 Objects, 1939–1945|Gordon Williamson|$9.99|2020-12-05
+18|Sports & Recreation|The Big Book of Wooden Boat Restoration|Thomas Larsson|$1.99|2021-05-06
+19|Transportation|Diesel Troubleshooter For Boats|Don Seddon|$10.39|2020-08-19
+20|Transportation|20th Century Passenger Flying Boats|Leslie Dawson|$14.99|2022-05-22
+21|History|Swift Boats at War in Vietnam|Guy Gugliotta|$21.99|2021-08-28
+22|Art|Drawing Boats and Ships|Yngve Edward Soderberg|$3.84|2020-01-06
+23|Transportation|The Classic Car Book|DK|$8.99|2022-01-29
+24|Reference|How to Illustrate and Design Concept Cars|Adrian Dewey|$12.99|2022-06-14
+25|Juvenile Nonfiction|Cars of Legend|Jorge Lucendo|$3.25|2022-08-14
+26|Transportation|Cars of the Standard Motor Company|Phil Homer|$12|2020-01-05
+27|Sports & Recreation|Bond Cars|Jason Barlow|$7.99|2019-08-28
+28|Games & Activities|Sports Cars Coloring Book for Kids 1|Nick Snels|$5.34|2020-09-06
+29|Technology & Engineering|Neighborhoods, People, and Community|Roger Ahlbrandt|$51.55|2021-08-19
+30|Biography & Autobiography|Remarkable People|Dan Walker|$4.99|2020-03-04
+31|Juvenile Nonfiction|The Sea Book|Charlotte Milner|$4.99|2021-11-22
+32|Fiction|Half the World (Shattered Sea, Book 2)|Joe Abercrombie|$2.99|2020-01-31
+33|Fiction|The House in the Cerulean Sea|Travis Klune|$4.99|2022-03-16
+34|Juvenile Nonfiction|The Bee Book|Charlotte Milner|$4.99|2020-10-12
+35|Science|The Northern Sea Route as a Shipping Lane|Tadeusz Pastusiak|$67.65|2020-05-27
+36|Fiction|The Sea, The Sea (Vintage Classics Murdoch Series)|Iris Murdoch|$5.99|2022-05-10
+37|History|Iron Fist From The Sea|Douw Steyn|$14.99|2021-02-11
+38|Fiction|THE SEA ADVENTURES - Boxed Set: 20+ Maritime Novels & Tales of Seas and Sailors|Jack London|$0.49|2020-05-08
+39|History|The Real Cruel Sea|Richard Woodman|$4.99|2022-05-07
+40|Technology & Engineering|Encyclopedia of Ocean Engineering|Weicheng Cui|$458.25|2020-11-23
+41|Science|Pollution in the Black Sea|Konstantin Pokazeev|$74.65|2021-11-23
+42|Business & Economics|Blue Ocean Leadership (Harvard Business Review Classics)|W. Chan Kim|$6.02|2019-05-17
+43|Political Science|Routledge Handbook of National and Regional Ocean Policies|Biliana Cicin-Sain|$39.03|2022-06-08
+44|Science|Ask an Ocean Explorer|Jonathan Copley|$3.99|2022-07-01
+45|Fiction|Daughters of the Colder Ocean|Sheri Murphy|$3.5|2022-10-01
+46|Science|Rotating Hydraulics|Lawrence L.J. Pratt|$53.65|2020-07-08
+47|Business & Economics|Can’t We Just Print More Money?|Rupal Patel|$7.99|2022-06-09
+48|Games|The England Quiz Book|Adam Pearson|$5.49|2019-10-02
+49|History|The Medieval Foundations of England|G.O. Sayles|$27.51|2019-05-05
+50|Literary Criticism|An Imaginary England|Roger Ebbatson|$24.63|2020-05-26
+51|Juvenile Nonfiction|Coming to England|Floella Benjamin|$3.99|2022-04-11
+52|Photography|Historic England: Gloucestershire|David Elder|$12|2019-07-13
+53|History|Engel's England|Matthew Engel|$6.5|2022-01-25
+54|History|Sleep in Early Modern England|Sasha Handley|$18|2020-10-23
+55|History|Building Magic|Owen Davies|$67.65|2020-01-15
+56|Juvenile Nonfiction|Look at That Building!|Scot Ritchie|$7.32|2020-08-25
+57|Business & Economics|Illustrated Building Pocket Book|Roxanna McDonald|$28.95|2020-04-02
+58|Architecture|Residential Architecture as Infrastructure|Stephen H. Kendall|$19.59|2021-11-19
+59|Crafts & Hobbies|Den Building|Jane Hewitt|$9.99|2019-06-12
+60|Technology & Engineering|Handbook of Green Building Design and Construction|Sam Kubba|$62.6|2021-09-13
+61|Sports & Recreation|Building Your Own Climbing Wall|Steve Lage|$17.99|2019-10-24
+62|Juvenile Fiction|The Building Boy|Ross Montgomery|$4.99|2019-02-24
+63|Architecture|The Technology of Building Defects|John Hinks|$30.39|2022-08-14
+64|Architecture|Building Surveyor’s Pocket Book|Melanie Smith|$13.11|2022-10-09
+65|Architecture|The Idea of Building|Steven Groak|$33.27|2022-03-07
+66|Architecture|The Whole Building Handbook|Maria Block|$47.67|2019-05-29
+67|Architecture|Building for Well-Being|Traci Rose Rider|$33.27|2020-02-11
+68|Fiction|Salt Houses|Hala Alyan|$4.99|2019-02-19
+69|Literary Criticism|House of Fiction|Phyllis Richardson|$0.99|2022-06-12
+70|Biography & Autobiography|The Queen's Houses|Alan Titchmarsh|$9.99|2020-05-31
+71|Social Science|London Bridge and its Houses, c. 1209-1761|Dorian Gerhold|$14.99|2021-09-29
+72|Law|English Houses|Bruce Munro|$28.95|2021-05-07
+73|History|The Gentleman's House in the British Atlantic World 1680-1780|S. Hague|$36.49|2021-09-30
+74|Fiction|Orhan's Inheritance|Aline Ohanesian|$14.99|2021-04-10
+75|Juvenile Fiction|The Ash House|Angharad Walker|$4.68|2022-10-06
+76|Religion|The Houses That The Angles Do Not Enter - The strange ways of the angels and their kinds and the houses where angels of mercy do not go|Ukkashah Abdul Mannan|$4.51|2021-02-19
+77|Literary Criticism|Houses, Secrets, and the Closet|Gero Bauer|$0|2019-03-21
+78|Fiction|London|Edward Rutherfurd|$2.99|2019-09-04
+79|Business & Economics|An Economic History of London 1800-1914|Professor Michael Ball|$26.07|2022-07-15
+80|Transportation|The London, Midland and Scottish Railway Volume Five The London and Birmingham Railway|Stanley C. Jenkins|$12|2020-05-01
+81|History|The Wealth of Wives|Barbara A. Hanawalt|$10.83|2020-01-23
+82|Fiction|Rivers of London|Ben Aaronovitch|$4.99|2021-01-04
+83|Performing Arts|The London Stage 1950-1959|J. P. Wearing|$117.99|2019-10-07
+84|Sports & Recreation|Tired of London, Tired of Life|Tom Jones|$7.99|2019-02-08
+85|History|London Folk Tales|Helen East|$4.99|2019-03-25
+86|Fiction|The Note|Zoë Folbigg|$2.99|2022-08-24
+87|History|Letters of Note|Shaun Usher|$15.99|2021-02-25
+88|Literary Collections|More Letters of Note|Shaun Usher|$15.99|2021-05-15
+89|Fiction|Funeral Note (Bob Skinner series, Book 22)|Quintin Jardine|$5.99|2020-07-22
+90|History|The New English Canaan of Thomas Morton with Introductory Matter and Notes|Thomas Morton|$1.99|2022-06-09
+91|Fiction|The Note-Books of Samuel Butler|Samuel Butler|$1.99|2022-08-06
+92|Education|Teacher Notes|Mattie Sullivan|$6.28|2021-11-27
+93|Fiction|Note to Boy|Sue Clark|$0.99|2019-02-18
+94|Religion|The Catechetical Lectures of S. Cyril, Archbishop of Jerusalem, Translated, with Notes and Indices, Fourth Edition|Cyril of Jerusalem|$30.39|2022-05-02
+95|Fiction|A Note In Music|Rosamond Lehmann|$3.99|2022-04-17
+96|Fiction|Wall Street to France|Rianna Shaikh|$3.99|2021-07-07
+97|Young Adult Fiction|The Blood Series Book Bundle 1-8 (A Rejected Mates Vampire Shifter Dark Romance )|Tamara Rose Blodgett|$10.82|2021-09-19
+98|Business & Economics|Cultural and Creative Industries|Marta Peris-Ortiz|$74.65|2020-12-27
+99|Fiction|The Blood Series Book Bundle 4-6|Tamara Rose Blodgett|$6.31|2022-08-05
+100|Social Science|Rethinking the Chicano Movement|Marc Simon Rodriguez|$26.07|2021-05-24
+101|Law|A History of Alternative Dispute Resolution|Jerome T. Barrett|$40.99|2021-12-05
+102|Fiction|Wilds Rage|Bill Jacobsen|$4.99|2020-12-21
+103|Fiction|Taking Chances|Susan Lewis|$2.99|2019-04-24
+104|Juvenile Fiction|Goldilocks Breaks In|Joan Holub|$3.99|2022-03-12
+105|Fiction|Scenes of a Graphic Nature|Caroline O'Donoghue|$4.99|2021-05-29
+106|Fiction|Promising Young Women|Caroline O'Donoghue|$2.99|2022-01-03
+107|Self-Help|On Connection|Kae Tempest|$6.99|2021-06-24
+108|Computers|Automotive Software-Connected Services in Mobile Networks|Manfred Broy|$36.49|2019-11-01
+109|Poetry|Clarity & Connection|Yung Pueblo|$7.99|2020-01-12
+110|Art|Invisible Connections|Sita Popat|$26.07|2020-12-09
+111|Psychology|The Healing Connection|Jean Baker Miller|$19.71|2020-06-23
+112|Psychology|Lost Connections|Johann Hari|$7.07|2021-01-09
+113|Fiction|The Paris Connection|Lorraine Brown|$2.99|2019-03-25
+114|Self-Help|Connection|Kristine Klussman|$10.74|2021-01-27
+115|Fiction|The Missed Connection|Denise Williams|$1.66|2019-09-19
+116|Fiction|The White House Connection (Sean Dillon Series, Book 7)|Jack Higgins|$5.49|2019-06-08
+117|Family & Relationships|The Lasting Connection|Michaela Thomas|$2.99|2021-08-09
+118|Fiction|Love Connection|Camilla Isley|$2.99|2019-04-27
+119|Nature|The Book of Nature Connection|Jacob Rodenburg|$21.99|2019-02-11
+120|Psychology|The Mind-Gut Connection|Emeran Mayer|$7.99|2021-11-29
+121|Fiction|[Dis]Connected Volume 2|Michelle Halket|$7.17|2021-08-09
+122|Social Science|The Sciences’ Media Connection –Public Communication and its Repercussions|Simone Rödder|$95.65|2021-02-18
+123|Fiction|The Electric|Edward Hogan|$3.99|2019-04-29
+124|Technology & Engineering|Wind Energy Systems for Electric Power Generation|Manfred Stiebler|$67.65|2020-12-15
+125|Technology & Engineering|Electric Arc Welding and Related Studies|N. Parkin|$12.99|2022-07-13
+126|Business & Economics|From Vehicles To Grid To Electric Vehicles To Green Grid: Many A Little Makes A Miracle|Li Fuhuo|$39|2022-07-15
+127|Juvenile Nonfiction|A Ladybird Book: Electricity|Elizabeth Jenner|$5.99|2020-08-07
+128|Business & Economics|Automotive E-Mobility. Industry Analysis|Dennis Schindeldecker|$13.99|2022-09-29
+129|Technology & Engineering|Design of Rotating Electrical Machines|Juha Pyrhonen|$76.99|2021-04-01
+130|Mathematics|The Maths Book|DK|$7.99|2019-05-20
+131|Mathematics|Maths Ladder – 7|Lata Thergaonkar|$4.94|2022-06-10
+132|Education|Maths — No Problem! Collection of 6 Workbooks, Ages 10-11 (Key Stage 2)|Maths — No Problem!|$7.99|2022-04-28
+133|Study Aids|WJEC GCSE Maths Foundation: Mastering Mathematics Revision Guide|Keith Pledger|$5.99|2022-09-06
+134|Self-Help|The Power of Vedic Maths|Atul Gupta|$2.29|2019-05-12
+135|Education|KS3 Maths Pupil Book 1.1 (Maths Frameworking)|Kevin Evans|$11.99|2020-08-01
+136|Science|The Physics Book|DK|$7.99|2021-11-01
+137|Medical|Basics of Medical Physics|Daniel Jirák|$7.15|2022-03-12
+138|Science|The CBM Physics Book|Bengt Friman|$74.65|2021-08-31
+139|Science|A Modern Introduction to Particle Physics|Fayyazuddin|$27.3|2021-12-23
+140|Science|Physics by Example|Tim Prichard|$4.98|2021-03-27
+141|Philosophy|Basic Structures of Reality|Colin McGinn|$25.18|2021-12-17
+142|Science|The Physics of Atoms and Quanta|Hermann Haken|$48.4|2020-11-24
+143|Science|Some Mathematical Methods of Physics|Gerald Goertzel|$11.54|2019-03-04

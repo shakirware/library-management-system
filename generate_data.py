@@ -38,7 +38,7 @@ def parse_item(item) -> str:
         return (
             f"{book_count}|{item['volumeInfo']['categories'][0]}|"
             f"{item['volumeInfo']['title']}|{item['volumeInfo']['authors'][0]}|"
-            f"${item['saleInfo']['retailPrice']['amount']}|{random_date()}"
+            f"${item['saleInfo']['retailPrice']['amount']}|{generate_date()}"
         )
     return None
 
@@ -54,11 +54,17 @@ def save_file(filename, array):
     with open(filename, "w", encoding="UTF-8") as file_:
         file_.write("\n".join(array))
 
-def random_date():
-    start = datetime.date(2019, 2, 1)
-    time_between_dates = datetime.date(2022, 9, 1) - start
-    random_number_of_days = random.randrange(time_between_dates.days)
+def generate_date(reserve=None):
+    if reserve:
+        start = datetime.date(2022, 11, 1)
+        end = datetime.date(2023, 2, 20)
+    else:
+        start = datetime.date(2019, 2, 1)
+        end = datetime.date(2022, 10, 20)
+        
+    random_number_of_days = random.randrange((end - start).days)
     return start + datetime.timedelta(days=random_number_of_days)
+    
 
 def generate_books(keywords):
     for keyword in keywords:
@@ -70,8 +76,28 @@ def generate_books(keywords):
 
 def generate_loans(amount):
     for i in range(1, amount):
-        loan_string = f'{random.randint(1,len(book_list))}|{random_date()}|{random_date()}|{random.randint(1111,2222)}'
-        loan_list.append(loan_string)
+        probability = random.random()
+        if probability < 0.2:
+            book_id = random.randint(1,len(book_list))
+            resv_date = None
+            checkout_date = generate_date()
+            return_date = generate_date()
+            member_id = random.randint(1111,2222)
+            loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
+        elif probability > 0.2 and probability < 0.7:
+            book_id = random.randint(1,len(book_list))
+            resv_date = generate_date(reserve=True)
+            checkout_date = None
+            return_date = None
+            member_id = random.randint(1111,1222)
+            loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
+        else:
+            book_id = random.randint(1,len(book_list))
+            resv_date = None
+            checkout_date = generate_date()
+            return_date = None
+            member_id = random.randint(1111,1222)
+            loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
     save_file("Loan_Reservation_History.txt", loan_list)
     
 

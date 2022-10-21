@@ -43,10 +43,33 @@ class Database:
                 }
                 books.append(book)
         self.populate_book_table(books)
+        
+    def parse_loan_file(self, text_file):
+        loans = []
+        with open(text_file) as file:
+            for line in file:
+                loan_string = line.rstrip().split('|')
+                loan = {
+                    'bookCopiesID': loan_string[0],
+                    'resv_date': loan_string[1],
+                    'checkout_date': loan_string[2],
+                    'return_date': loan_string[3],
+                    'member_id': loan_string[4]
+                }
+                loans.append(loan)
+        self.populate_loan_table(loans)
+    
+    def populate_loan_table(self, loans):
+        for loan in loans:
+            self.cursor.execute(
+                "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
+                (loan['bookCopiesID'], loan['resv_date'], loan['checkout_date'], loan['return_date'], loan['member_id'])
+                )
+        self.conn.commit()
+            
                 
     def populate_book_table(self, books):
         """The database tables are populated with records from the text file."""
-        count = 1
         for book in books:
             author_exist = self.cursor.execute("SELECT 1 FROM authors WHERE authorName = ?", (book['author'],)).fetchone()
             if not author_exist:
@@ -69,5 +92,6 @@ class Database:
 def main():
     db = Database()
     db.parse_book_file('Book_Info.txt')
+    db.parse_loan_file('Loan_Reservation_History.txt')
     
 main()
