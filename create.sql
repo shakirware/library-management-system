@@ -33,3 +33,15 @@ CREATE TABLE IF NOT EXISTS authors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 	authorName TEXT NOT NULL
 );
+
+SELECT
+  bookCopies.id,
+  book.title,
+  book.genre,
+  authors.authorName
+FROM bookCopies
+JOIN book
+  ON bookCopies.id = book.id
+JOIN authors
+  ON book.authorID = authors.id
+  WHERE book.title = 'car%';

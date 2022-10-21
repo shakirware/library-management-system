@@ -1,5 +1,4 @@
 import sqlite3
-import pandas
 
 class Database:
     """Interacts with an sqlite database."""
@@ -46,13 +45,12 @@ class Database:
         self.populate_book_table(books)
                 
     def populate_book_table(self, books):
-    """The database tables are populated with records from the text file."""
+        """The database tables are populated with records from the text file."""
         count = 1
         for book in books:
             author_exist = self.cursor.execute("SELECT 1 FROM authors WHERE authorName = ?", (book['author'],)).fetchone()
             if not author_exist:
                 self.cursor.execute("INSERT INTO authors (authorName) VALUES(?)", (book['author'],))
-        
             book_exist = self.cursor.execute("SELECT 1 FROM book WHERE title = ? AND genre = ?", (book['title'], book['genre'])).fetchone()
             # if book not already in book table then add to bookcopies and book
             if not book_exist:
@@ -62,9 +60,10 @@ class Database:
                 # book already in book table so grab and id and insert into bookcopies
                 book_id = self.cursor.execute("SELECT id FROM book WHERE title = ? AND genre = ?", (book['title'], book['genre'])).fetchone()
                 self.cursor.execute("INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) VALUES(?, ?, ?);", (book_id[0], book['purchase_date'], book['purchase_price']))
-
         self.conn.commit()
                 
+    def query_database(self, query):
+        return self.cursor.execute(query).fetchall()
      
 
 def main():
