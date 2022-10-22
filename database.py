@@ -55,6 +55,7 @@ class Database:
         with open(text_file) as file:
             for line in file:
                 loan_string = line.rstrip().split('|')
+                loan_string = list(map(lambda x: None if x == 'None' else x, loan_string))
                 loan = {
                     'bookCopiesID': loan_string[0],
                     'resv_date': loan_string[1],
@@ -70,7 +71,7 @@ class Database:
         for loan in loans:
             self.cursor.execute(
                 "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
-                (loan['bookCopiesID'], loan['resv_date'], loan['checkout_date'], loan['return_date'], loan['member_id'])
+                (loan['bookCopiesID'], loan['member_id'], loan['checkout_date'], loan['return_date'], loan['resv_date'])
                 )
         self.conn.commit()
             
@@ -95,5 +96,23 @@ class Database:
                 
     def query_database(self, query):
         return self.cursor.execute(query).fetchall()
-     
+        
+        
+    def insert_loan(self, book_id, member_id, checkout_date = None, return_date = None, resv_date = None):
+        self.cursor.execute("INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)", 
+                (book_id, member_id, checkout_date, return_date, resv_date)
+        )
+        self.conn.commit()
+        
+    def insert_reserve(self, book_id, member_id, resv_date):
+        self.cursor.execute("INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)", 
+                (book_id, member_id, None, None, resv_date)
+        )
+        self.conn.commit()
+        
+    def update_book_return(self, book_id, return_date):
+        self.cursor.execute("UPDATE loans SET returnDate = ? WHERE bookCopiesID = ?;", 
+                (return_date, book_id)
+        )
+        self.conn.commit()
 

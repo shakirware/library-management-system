@@ -77,35 +77,45 @@ def generate_books(keywords):
         parse_books(book_data)
         save_file("Book_Info.txt", book_list)
 
+
+
+
+
 def generate_loans(amount):
+    used_books = []
     for i in range(1, amount):
         probability = random.random()
-        if probability < 0.2:
+        
+        book_id = random.randint(1,len(book_list))
+        while book_id in used_books:
             book_id = random.randint(1,len(book_list))
+        used_books.append(book_id)
+        
+        if probability < 0.5:
+            for i in range(random.randint(1,5)):
+                resv_date = None
+                checkout_date = generate_date()
+                return_date = generate_date()
+                member_id = random.randint(1111,1222)
+                loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')  
+        elif 0.5 < probability < 0.7:
             resv_date = None
             checkout_date = generate_date()
-            return_date = generate_date()
-            member_id = random.randint(1111,2222)
+            return_date = None
+            member_id = random.randint(1111,1222)
             loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
-        elif probability > 0.2 and probability < 0.7:
-            book_id = random.randint(1,len(book_list))
+        else:
             resv_date = generate_date(reserve=True)
             checkout_date = None
             return_date = None
             member_id = random.randint(1111,1222)
             loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
-        else:
-            book_id = random.randint(1,len(book_list))
-            resv_date = None
-            checkout_date = generate_date()
-            return_date = None
-            member_id = random.randint(1111,1222)
-            loan_list.append(f'{book_id}|{resv_date}|{checkout_date}|{return_date}|{member_id}')
+            
     save_file("Loan_Reservation_History.txt", loan_list)
     
 
 def main():
     generate_books(keywords)
-    generate_loans(200)
+    generate_loans(100)
 
 main()

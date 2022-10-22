@@ -22,9 +22,9 @@ CREATE TABLE IF NOT EXISTS loans (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 	bookCopiesID INT NOT NULL,
     memberID INT NOT NULL,
-	checkoutDate TEXT NOT NULL,
-	returnDate TEXT NOT NULL,
-    reservationDate TEXT NOT NULL
+	checkoutDate TEXT,
+	returnDate TEXT,
+    reservationDate TEXT
 );
 
 -- Table: authors
