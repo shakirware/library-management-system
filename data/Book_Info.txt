@@ -1,0 +1,200 @@
+0|Non Fiction|10-Day Green Smoothie Cleanse|JJ Smith|8|2016
+1|Fiction|11/22/63: A Novel|Stephen King|22|2011
+2|Non Fiction|12 Rules for Life: An Antidote to Chaos|Jordan B. Peterson|15|2018
+3|Fiction|1984 (Signet Classics)|George Orwell|6|2017
+4|Non Fiction|5,000 Awesome Facts (About Everything!) (National Geographic Kids)|National Geographic Kids|12|2019
+5|Fiction|A Dance with Dragons (A Song of Ice and Fire)|George R. R. Martin|11|2011
+6|Fiction|A Game of Thrones / A Clash of Kings / A Storm of Swords / A Feast of Crows / A Dance with Dragons|George R. R. Martin|30|2014
+7|Fiction|A Gentleman in Moscow: A Novel|Amor Towles|15|2017
+8|Non Fiction|A Higher Loyalty: Truth, Lies, and Leadership|James Comey|3|2018
+9|Fiction|A Man Called Ove: A Novel|Fredrik Backman|8|2016
+10|Fiction|A Man Called Ove: A Novel|Fredrik Backman|8|2017
+11|Non Fiction|A Patriot's History of the United States: From Columbus's Great Discovery to the War on Terror|Larry Schweikart|2|2010
+12|Non Fiction|A Stolen Life: A Memoir|Jaycee Dugard|32|2011
+13|Fiction|A Wrinkle in Time (Time Quintet)|Madeleine L'Engle|5|2018
+14|Non Fiction|Act Like a Lady, Think Like a Man: What Men Really Think About Love, Relationships, Intimacy, and Commitment|Steve Harvey|17|2009
+15|Non Fiction|Adult Coloring Book Designs: Stress Relief Coloring Book: Garden Designs, Mandalas, Animals, and Paisley Patterns|Adult Coloring Book Designs|4|2016
+16|Non Fiction|Adult Coloring Book: Stress Relieving Animal Designs|Blue Star Coloring|6|2015
+17|Non Fiction|Adult Coloring Book: Stress Relieving Patterns|Blue Star Coloring|6|2015
+18|Non Fiction|Adult Coloring Books: A Coloring Book for Adults Featuring Mandalas and Henna Inspired Flowers, Animals, and Paisley…|Coloring Books for Adults|8|2015
+19|Non Fiction|Alexander Hamilton|Ron Chernow|13|2016
+20|Fiction|All the Light We Cannot See|Anthony Doerr|14|2014
+21|Fiction|All the Light We Cannot See|Anthony Doerr|14|2015
+22|Fiction|Allegiant|Veronica Roth|13|2013
+23|Non Fiction|American Sniper: The Autobiography of the Most Lethal Sniper in U.S. Military History|Chris Kyle|9|2015
+24|Fiction|And the Mountains Echoed|Khaled Hosseini|13|2013
+25|Non Fiction|Arguing with Idiots: How to Stop Small Minds and Big Government|Glenn Beck|5|2009
+26|Non Fiction|Astrophysics for People in a Hurry|Neil deGrasse Tyson|9|2017
+27|Non Fiction|Autobiography of Mark Twain, Vol. 1|Mark Twain|14|2010
+28|Non Fiction|Baby Touch and Feel: Animals|DK|5|2015
+29|Non Fiction|Balance (Angie's Extreme Stress Menders)|Angie Grace|11|2015
+30|Non Fiction|Barefoot Contessa Foolproof: Recipes You Can Trust: A Cookbook|Ina Garten|24|2012
+31|Non Fiction|Barefoot Contessa, How Easy Is That?: Fabulous Recipes & Easy Tips|Ina Garten|21|2010
+32|Non Fiction|Becoming|Michelle Obama|11|2018
+33|Non Fiction|Becoming|Michelle Obama|11|2019
+34|Non Fiction|Being Mortal: Medicine and What Matters in the End|Atul Gawande|15|2015
+35|Non Fiction|Between the World and Me|Ta-Nehisi Coates|13|2015
+36|Non Fiction|Between the World and Me|Ta-Nehisi Coates|13|2016
+37|Non Fiction|Born to Run|Bruce Springsteen|18|2016
+38|Fiction|Breaking Dawn (The Twilight Saga, Book 4)|Stephenie Meyer|13|2009
+39|Non Fiction|Broke: The Plan to Restore Our Trust, Truth and Treasure|Glenn Beck|8|2010
+40|Fiction|Brown Bear, Brown Bear, What Do You See?|Bill Martin Jr.|5|2017
+41|Fiction|Brown Bear, Brown Bear, What Do You See?|Bill Martin Jr.|5|2019
+42|Fiction|Cabin Fever (Diary of a Wimpy Kid, Book 6)|Jeff Kinney|0|2011
+43|Non Fiction|Calm the F*ck Down: An Irreverent Adult Coloring Book (Irreverent Book Series)|Sasha O'Hara|4|2016
+44|Non Fiction|Can't Hurt Me: Master Your Mind and Defy the Odds|David Goggins|18|2019
+45|Non Fiction|Capital in the Twenty First Century|Thomas Piketty|28|2014
+46|Fiction|Catching Fire (The Hunger Games)|Suzanne Collins|11|2010
+47|Fiction|Catching Fire (The Hunger Games)|Suzanne Collins|11|2011
+48|Fiction|Catching Fire (The Hunger Games)|Suzanne Collins|11|2012
+49|Non Fiction|Cravings: Recipes for All the Food You Want to Eat: A Cookbook|Chrissy Teigen|16|2016
+50|Non Fiction|Crazy Love: Overwhelmed by a Relentless God|Francis Chan|14|2009
+51|Non Fiction|Crazy Love: Overwhelmed by a Relentless God|Francis Chan|14|2010
+52|Non Fiction|Crazy Love: Overwhelmed by a Relentless God|Francis Chan|14|2011
+53|Fiction|Crazy Rich Asians (Crazy Rich Asians Trilogy)|Kevin Kwan|8|2018
+54|Non Fiction|Creative Haven Creative Cats Coloring Book (Adult Coloring)|Marjorie Sarnat|4|2015
+55|Non Fiction|Creative Haven Owls Coloring Book (Adult Coloring)|Marjorie Sarnat|5|2015
+56|Fiction|Cutting for Stone|Abraham Verghese|11|2010
+57|Fiction|Cutting for Stone|Abraham Verghese|11|2011
+58|Non Fiction|Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead|Brené Brown|10|2013
+59|Non Fiction|David and Goliath: Underdogs, Misfits, and the Art of Battling Giants|Malcolm Gladwell|13|2013
+60|Fiction|Dead And Gone: A Sookie Stackhouse Novel (Sookie Stackhouse/True Blood)|Charlaine Harris|4|2009
+61|Fiction|Dead in the Family (Sookie Stackhouse/True Blood, Book 10)|Charlaine Harris|8|2010
+62|Fiction|Dead Reckoning (Sookie Stackhouse/True Blood, Book 11)|Charlaine Harris|4|2011
+63|Fiction|Dear Zoo: A Lift-the-Flap Book|Rod Campbell|5|2015
+64|Fiction|Dear Zoo: A Lift-the-Flap Book|Rod Campbell|5|2016
+65|Fiction|Dear Zoo: A Lift-the-Flap Book|Rod Campbell|5|2017
+66|Fiction|Dear Zoo: A Lift-the-Flap Book|Rod Campbell|5|2018
+67|Non Fiction|Decision Points|George W. Bush|17|2010
+68|Non Fiction|Delivering Happiness: A Path to Profits, Passion, and Purpose|Tony Hsieh|15|2010
+69|Non Fiction|Diagnostic and Statistical Manual of Mental Disorders, 5th Edition: DSM-5|American Psychiatric Association|105|2013
+70|Non Fiction|Diagnostic and Statistical Manual of Mental Disorders, 5th Edition: DSM-5|American Psychiatric Association|105|2014
+71|Fiction|Diary of a Wimpy Kid: Hard Luck, Book 8|Jeff Kinney|0|2013
+72|Fiction|Diary of a Wimpy Kid: The Last Straw (Book 3)|Jeff Kinney|15|2009
+73|Fiction|Diary of a Wimpy Kid: The Long Haul|Jeff Kinney|22|2014
+74|Non Fiction|Difficult Riddles For Smart Kids: 300 Difficult Riddles And Brain Teasers Families Will Love (Books for Smart Kids)|M Prefontaine|5|2019
+75|Fiction|Divergent|Veronica Roth|15|2013
+76|Fiction|Divergent|Veronica Roth|15|2014
+77|Fiction|Divergent / Insurgent|Veronica Roth|6|2014
+78|Non Fiction|Divine Soul Mind Body Healing and Transmission System: The Divine Way to Heal You, Humanity, Mother Earth, and All…|Zhi Gang Sha|6|2009
+79|Fiction|Doctor Sleep: A Novel|Stephen King|13|2013
+80|Fiction|Dog Days (Diary of a Wimpy Kid, Book 4) (Volume 4)|Jeff Kinney|12|2009
+81|Fiction|Dog Man and Cat Kid: From the Creator of Captain Underpants (Dog Man #4)|Dav Pilkey|6|2018
+82|Fiction|Dog Man: A Tale of Two Kitties: From the Creator of Captain Underpants (Dog Man #3)|Dav Pilkey|8|2017
+83|Fiction|Dog Man: Brawl of the Wild: From the Creator of Captain Underpants (Dog Man #6)|Dav Pilkey|4|2018
+84|Fiction|Dog Man: Brawl of the Wild: From the Creator of Captain Underpants (Dog Man #6)|Dav Pilkey|4|2019
+85|Fiction|Dog Man: Fetch-22: From the Creator of Captain Underpants (Dog Man #8)|Dav Pilkey|8|2019
+86|Fiction|Dog Man: For Whom the Ball Rolls: From the Creator of Captain Underpants (Dog Man #7)|Dav Pilkey|8|2019
+87|Fiction|Dog Man: Lord of the Fleas: From the Creator of Captain Underpants (Dog Man #5)|Dav Pilkey|6|2018
+88|Fiction|Double Down (Diary of a Wimpy Kid #11)|Jeff Kinney|20|2016
+89|Non Fiction|Dover Creative Haven Art Nouveau Animal Designs Coloring Book (Creative Haven Coloring Books)|Marty Noble|5|2015
+90|Non Fiction|Drive: The Surprising Truth About What Motivates Us|Daniel H. Pink|16|2010
+91|Non Fiction|Eat This Not That! Supermarket Survival Guide: The No-Diet Weight Loss Solution|David Zinczenko|1|2009
+92|Non Fiction|Eat This, Not That! Thousands of Simple Food Swaps that Can Save You 10, 20, 30 Pounds--or More!|David Zinczenko|14|2009
+93|Non Fiction|Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss, Revised Edition|Joel Fuhrman MD|9|2011
+94|Non Fiction|Eat to Live: The Amazing Nutrient-Rich Program for Fast and Sustained Weight Loss, Revised Edition|Joel Fuhrman MD|9|2012
+95|Fiction|Eclipse (Twilight Sagas)|Stephenie Meyer|7|2009
+96|Fiction|Eclipse (Twilight)|Stephenie Meyer|18|2009
+97|Non Fiction|Educated: A Memoir|Tara Westover|15|2018
+98|Non Fiction|Educated: A Memoir|Tara Westover|15|2019
+99|Non Fiction|Enchanted Forest: An Inky Quest and Coloring book (Activity Books, Mindfulness and Meditation, Illustrated Floral Prints…|Johanna Basford|9|2015
+100|Fiction|Fahrenheit 451|Ray Bradbury|8|2016
+101|Fiction|Fahrenheit 451|Ray Bradbury|8|2018
+102|Fiction|Fantastic Beasts and Where to Find Them: The Original Screenplay (Harry Potter)|J.K. Rowling|15|2016
+103|Non Fiction|Fear: Trump in the White House|Bob Woodward|2|2018
+104|Fiction|Fifty Shades Darker|E L James|7|2012
+105|Fiction|Fifty Shades Freed: Book Three of the Fifty Shades Trilogy (Fifty Shades of Grey Series) (English Edition)|E L James|11|2012
+106|Fiction|Fifty Shades of Grey: Book One of the Fifty Shades Trilogy (Fifty Shades of Grey Series)|E L James|14|2012
+107|Fiction|Fifty Shades of Grey: Book One of the Fifty Shades Trilogy (Fifty Shades of Grey Series)|E L James|14|2013
+108|Fiction|Fifty Shades Trilogy (Fifty Shades of Grey / Fifty Shades Darker / Fifty Shades Freed)|E L James|32|2012
+109|Non Fiction|Fire and Fury: Inside the Trump White House|Michael Wolff|6|2018
+110|Non Fiction|First 100 Words|Roger Priddy|4|2014
+111|Non Fiction|First 100 Words|Roger Priddy|4|2015
+112|Non Fiction|First 100 Words|Roger Priddy|4|2016
+113|Non Fiction|First 100 Words|Roger Priddy|4|2017
+114|Non Fiction|First 100 Words|Roger Priddy|4|2018
+115|Non Fiction|Food Rules: An Eater's Manual|Michael Pollan|9|2010
+116|Fiction|Frozen (Little Golden Book)|RH Disney|0|2014
+117|Non Fiction|Game Change: Obama and the Clintons, McCain and Palin, and the Race of a Lifetime|John Heilemann|9|2010
+118|Fiction|Game of Thrones Boxed Set: A Game of Thrones/A Clash of Kings/A Storm of Swords/A Feast for Crows|George R.R. Martin|5|2011
+119|Fiction|Game of Thrones Boxed Set: A Game of Thrones/A Clash of Kings/A Storm of Swords/A Feast for Crows|George R.R. Martin|5|2012
+120|Fiction|Game of Thrones Boxed Set: A Game of Thrones/A Clash of Kings/A Storm of Swords/A Feast for Crows|George R.R. Martin|5|2013
+121|Non Fiction|George Washington's Sacred Fire|Peter A. Lillback|20|2010
+122|Non Fiction|George Washington's Secret Six: The Spy Ring That Saved the American Revolution|Brian Kilmeade|16|2013
+123|Fiction|Giraffes Can't Dance|Giles Andreae|4|2015
+124|Fiction|Giraffes Can't Dance|Giles Andreae|4|2016
+125|Fiction|Giraffes Can't Dance|Giles Andreae|4|2017
+126|Fiction|Giraffes Can't Dance|Giles Andreae|4|2018
+127|Fiction|Giraffes Can't Dance|Giles Andreae|4|2019
+128|Non Fiction|Girl, Stop Apologizing: A Shame-Free Plan for Embracing and Achieving Your Goals|Rachel Hollis|12|2019
+129|Non Fiction|Girl, Wash Your Face: Stop Believing the Lies About Who You Are So You Can Become Who You Were Meant to Be|Rachel Hollis|12|2018
+130|Non Fiction|Girl, Wash Your Face: Stop Believing the Lies About Who You Are So You Can Become Who You Were Meant to Be|Rachel Hollis|12|2019
+131|Non Fiction|Glenn Beck's Common Sense: The Case Against an Out-of-Control Government, Inspired by Thomas Paine|Glenn Beck|11|2009
+132|Fiction|Go Set a Watchman: A Novel|Harper Lee|19|2015
+133|Fiction|Go the F**k to Sleep|Adam Mansbach|9|2011
+134|Non Fiction|Going Rogue: An American Life|Sarah Palin|6|2009
+135|Fiction|Gone Girl|Gillian Flynn|10|2012
+136|Fiction|Gone Girl|Gillian Flynn|10|2013
+137|Fiction|Gone Girl|Gillian Flynn|9|2014
+138|Non Fiction|Good Days Start With Gratitude: A 52 Week Guide To Cultivate An Attitude Of Gratitude: Gratitude Journal|Pretty Simple Press|6|2019
+139|Non Fiction|Good to Great: Why Some Companies Make the Leap and Others Don't|Jim Collins|14|2009
+140|Non Fiction|Good to Great: Why Some Companies Make the Leap and Others Don't|Jim Collins|14|2010
+141|Non Fiction|Good to Great: Why Some Companies Make the Leap and Others Don't|Jim Collins|14|2011
+142|Non Fiction|Good to Great: Why Some Companies Make the Leap and Others Don't|Jim Collins|14|2012
+143|Fiction|Goodnight Moon|Margaret Wise Brown|5|2017
+144|Fiction|Goodnight Moon|Margaret Wise Brown|5|2018
+145|Fiction|Goodnight Moon|Margaret Wise Brown|5|2019
+146|Fiction|Goodnight, Goodnight Construction Site (Hardcover Books for Toddlers, Preschool Books for Kids)|Sherri Duskey Rinker|7|2012
+147|Fiction|Goodnight, Goodnight Construction Site (Hardcover Books for Toddlers, Preschool Books for Kids)|Sherri Duskey Rinker|7|2013
+148|Non Fiction|Grain Brain: The Surprising Truth about Wheat, Carbs, and Sugar--Your Brain's Silent Killers|David Perlmutter MD|10|2014
+149|Fiction|Grey: Fifty Shades of Grey as Told by Christian (Fifty Shades of Grey Series)|E L James|14|2015
+150|Non Fiction|Guts|Raina Telgemeier|7|2019
+151|Non Fiction|Hamilton: The Revolution|Lin-Manuel Miranda|54|2016
+152|Non Fiction|Happy, Happy, Happy: My Life and Legacy as the Duck Commander|Phil Robertson|11|2013
+153|Fiction|Harry Potter and the Chamber of Secrets: The Illustrated Edition (Harry Potter, Book 2)|J.K. Rowling|30|2016
+154|Fiction|Harry Potter and the Cursed Child, Parts 1 & 2, Special Rehearsal Edition Script|J.K. Rowling|12|2016
+155|Fiction|Harry Potter and the Goblet of Fire: The Illustrated Edition (Harry Potter, Book 4) (4)|J. K. Rowling|18|2019
+156|Fiction|Harry Potter and the Prisoner of Azkaban: The Illustrated Edition (Harry Potter, Book 3)|J.K. Rowling|30|2017
+157|Fiction|Harry Potter and the Sorcerer's Stone: The Illustrated Edition (Harry Potter, Book 1)|J.K. Rowling|22|2016
+158|Non Fiction|Harry Potter Coloring Book|Scholastic|9|2015
+159|Fiction|Harry Potter Paperback Box Set (Books 1-7)|J. K. Rowling|52|2016
+160|Non Fiction|Have a Little Faith: A True Story|Mitch Albom|4|2009
+161|Non Fiction|Heaven is for Real: A Little Boy's Astounding Story of His Trip to Heaven and Back|Todd Burpo|10|2011
+162|Non Fiction|Heaven is for Real: A Little Boy's Astounding Story of His Trip to Heaven and Back|Todd Burpo|10|2012
+163|Non Fiction|Hillbilly Elegy: A Memoir of a Family and Culture in Crisis|J. D. Vance|14|2016
+164|Non Fiction|Hillbilly Elegy: A Memoir of a Family and Culture in Crisis|J. D. Vance|14|2017
+165|Non Fiction|Homebody: A Guide to Creating Spaces You Never Want to Leave|Joanna Gaines|22|2018
+166|Non Fiction|How to Win Friends & Influence People|Dale Carnegie|11|2014
+167|Non Fiction|How to Win Friends & Influence People|Dale Carnegie|11|2015
+168|Non Fiction|How to Win Friends & Influence People|Dale Carnegie|11|2016
+169|Non Fiction|How to Win Friends & Influence People|Dale Carnegie|11|2017
+170|Non Fiction|How to Win Friends & Influence People|Dale Carnegie|11|2018
+171|Non Fiction|Howard Stern Comes Again|Howard Stern|16|2019
+172|Non Fiction|Humans of New York|Brandon Stanton|15|2013
+173|Non Fiction|Humans of New York|Brandon Stanton|15|2014
+174|Non Fiction|Humans of New York : Stories|Brandon Stanton|17|2015
+175|Non Fiction|Hyperbole and a Half: Unfortunate Situations, Flawed Coping Mechanisms, Mayhem, and Other Things That Happened|Allie Brosh|17|2013
+176|Non Fiction|I Am Confident, Brave & Beautiful: A Coloring Book for Girls|Hopscotch Girls|7|2019
+177|Fiction|I, Alex Cross|James Patterson|7|2009
+178|Fiction|If Animals Kissed Good Night|Ann Whitford Paul|4|2017
+179|Fiction|If Animals Kissed Good Night|Ann Whitford Paul|4|2019
+180|Fiction|If I Stay|Gayle Forman|9|2014
+181|Non Fiction|In the Garden of Beasts: Love, Terror, and an American Family in Hitler's Berlin|Eric Larson|21|2011
+182|Fiction|Inferno|Dan Brown|14|2013
+183|Fiction|Inheritance: Book IV (Inheritance Cycle)|Christopher Paolini|20|2011
+184|Non Fiction|Instant Pot Pressure Cooker Cookbook: 500 Everyday Recipes for Beginners and Advanced Users. Try Easy and Healthy…|Jennifer Smith|13|2019
+185|Non Fiction|Instant Pot Pressure Cooker Cookbook: 500 Everyday Recipes for Beginners and Advanced Users. Try Easy and Healthy…|Jennifer Smith|13|2018
+186|Non Fiction|It's Not Supposed to Be This Way: Finding Unexpected Strength When Disappointments Leave You Shattered|Lysa TerKeurst|12|2019
+187|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2011
+188|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2012
+189|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2013
+190|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2014
+191|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2015
+192|Non Fiction|Jesus Calling: Enjoying Peace in His Presence (with Scripture References)|Sarah Young|8|2016
+193|Fiction|JOURNEY TO THE ICE P|RH Disney|0|2014
+194|Fiction|Joyland (Hard Case Crime)|Stephen King|12|2013
+195|Non Fiction|Killers of the Flower Moon: The Osage Murders and the Birth of the FBI|David Grann|17|2017
+196|Non Fiction|Killing Jesus (Bill O'Reilly's Killing Series)|Bill O'Reilly|12|2013
+197|Non Fiction|Killing Kennedy: The End of Camelot|Bill O'Reilly|25|2012
+198|Non Fiction|Killing Lincoln: The Shocking Assassination that Changed America Forever (Bill O'Reilly's Killing Series)|Bill O'Reilly|10|2011
+199|Non Fiction|Killing Lincoln: The Shocking Assassination that Changed America Forever (Bill O'Reilly's Killing Series)|Bill O'Reilly|10|2012
