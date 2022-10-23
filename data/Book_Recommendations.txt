@@ -3,14 +3,8 @@
 202|Non Fiction|Killing the Rising Sun: How America Vanquished World War II Japan (Bill O'Reilly's Killing Series)|Bill O'Reilly|6|2016
 203|Non Fiction|Kitchen Confidential Updated Edition: Adventures in the Culinary Underbelly (P.S.)|Anthony Bourdain|8|2018
 204|Non Fiction|Knock-Knock Jokes for Kids|Rob Elliott|4|2013
-205|Non Fiction|Knock-Knock Jokes for Kids|Rob Elliott|4|2014
-206|Non Fiction|Knock-Knock Jokes for Kids|Rob Elliott|4|2015
 207|Fiction|Last Week Tonight with John Oliver Presents A Day in the Life of Marlon Bundo (Better Bundo Book, LGBT Childrens Book)|Jill Twiss|13|2018
 208|Non Fiction|Laugh-Out-Loud Jokes for Kids|Rob Elliott|4|2013
-209|Non Fiction|Laugh-Out-Loud Jokes for Kids|Rob Elliott|4|2014
-210|Non Fiction|Laugh-Out-Loud Jokes for Kids|Rob Elliott|4|2015
-211|Non Fiction|Laugh-Out-Loud Jokes for Kids|Rob Elliott|4|2016
-212|Non Fiction|Laugh-Out-Loud Jokes for Kids|Rob Elliott|4|2017
 213|Non Fiction|Lean In: Women, Work, and the Will to Lead|Sheryl Sandberg|13|2013
 214|Non Fiction|Leonardo da Vinci|Walter Isaacson|21|2017
 215|Non Fiction|Lettering and Modern Calligraphy: A Beginner's Guide: Learn Hand Lettering and Brush Lettering|Paper Peony Press|6|2018
@@ -22,21 +16,14 @@
 221|Fiction|Looking for Alaska|John Green|7|2014
 222|Non Fiction|Love Wins: A Book About Heaven, Hell, and the Fate of Every Person Who Ever Lived|Rob Bell|13|2011
 223|Fiction|Love You Forever|Robert Munsch|5|2014
-224|Fiction|Love You Forever|Robert Munsch|5|2015
 225|Non Fiction|Magnolia Table: A Collection of Recipes for Gathering|Joanna Gaines|16|2018
 226|Non Fiction|Make It Ahead: A Barefoot Contessa Cookbook|Ina Garten|20|2014
 227|Non Fiction|Make Your Bed: Little Things That Can Change Your Life...And Maybe the World|Admiral William H. McRaven|11|2017
 228|Non Fiction|Mastering the Art of French Cooking, Vol. 2|Julia Child|27|2009
 229|Non Fiction|Milk and Honey|Rupi Kaur|8|2016
-230|Non Fiction|Milk and Honey|Rupi Kaur|8|2017
-231|Non Fiction|Milk and Honey|Rupi Kaur|8|2018
 232|Non Fiction|Milk and Vine: Inspirational Quotes From Classic Vines|Adam Gasiewski|6|2017
 233|Non Fiction|Mindset: The New Psychology of Success|Carol S. Dweck|10|2014
-234|Non Fiction|Mindset: The New Psychology of Success|Carol S. Dweck|10|2015
-235|Non Fiction|Mindset: The New Psychology of Success|Carol S. Dweck|10|2016
 236|Fiction|Mockingjay (The Hunger Games)|Suzanne Collins|8|2010
-237|Fiction|Mockingjay (The Hunger Games)|Suzanne Collins|8|2011
-238|Fiction|Mockingjay (The Hunger Games)|Suzanne Collins|8|2012
 239|Non Fiction|National Geographic Kids Why?: Over 1,111 Answers to Everything|Crispin Boyer|16|2019
 240|Non Fiction|National Geographic Little Kids First Big Book of Why (National Geographic Little Kids First Big Books)|Amy Shields|11|2019
 241|Fiction|New Moon (The Twilight Saga)|Stephenie Meyer|10|2009
@@ -44,55 +31,28 @@
 243|Non Fiction|No Easy Day: The Autobiography of a Navy Seal: The Firsthand Account of the Mission That Killed Osama Bin Laden|Mark Owen|14|2012
 244|Non Fiction|Obama: An Intimate Portrait|Pete Souza|22|2017
 245|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2012
-246|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2013
-247|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2014
-248|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2015
-249|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2016
-250|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2017
-251|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2018
-252|Fiction|Oh, the Places You'll Go!|Dr. Seuss|8|2019
 253|Fiction|Old School (Diary of a Wimpy Kid #10)|Jeff Kinney|7|2015
 254|Fiction|Olive Kitteridge|Elizabeth Strout|12|2009
 255|Non Fiction|One Thousand Gifts: A Dare to Live Fully Right Where You Are|Ann Voskamp|13|2011
-256|Non Fiction|One Thousand Gifts: A Dare to Live Fully Right Where You Are|Ann Voskamp|13|2012
 257|Non Fiction|Option B: Facing Adversity, Building Resilience, and Finding Joy|Sheryl Sandberg|9|2017
 258|Fiction|Origin: A Novel (Robert Langdon)|Dan Brown|13|2017
 259|Fiction|Orphan Train|Christina Baker Kline|11|2014
 260|Non Fiction|Outliers: The Story of Success|Malcolm Gladwell|20|2009
-261|Non Fiction|Outliers: The Story of Success|Malcolm Gladwell|20|2010
 262|Non Fiction|P is for Potty! (Sesame Street) (Lift-the-Flap)|Naomi Kleinberg|5|2018
-263|Non Fiction|P is for Potty! (Sesame Street) (Lift-the-Flap)|Naomi Kleinberg|5|2019
 264|Fiction|Percy Jackson and the Olympians Paperback Boxed Set (Books 1-3)|Rick Riordan|2|2010
 265|Fiction|Player's Handbook (Dungeons & Dragons)|Wizards RPG Team|27|2017
-266|Fiction|Player's Handbook (Dungeons & Dragons)|Wizards RPG Team|27|2018
-267|Fiction|Player's Handbook (Dungeons & Dragons)|Wizards RPG Team|27|2019
 268|Fiction|Pokémon Deluxe Essential Handbook: The Need-to-Know Stats and Facts on Over 700 Pokémon|Scholastic|9|2016
 269|Non Fiction|Proof of Heaven: A Neurosurgeon's Journey into the Afterlife|Eben Alexander|10|2012
-270|Non Fiction|Proof of Heaven: A Neurosurgeon's Journey into the Afterlife|Eben Alexander|10|2013
 271|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2009
-272|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2010
-273|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2011
-274|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2012
-275|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2013
-276|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2014
-277|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2015
-278|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2016
-279|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2017
-280|Non Fiction|Publication Manual of the American Psychological Association, 6th Edition|American Psychological Association|46|2018
 281|Fiction|Puppy Birthday to You! (Paw Patrol) (Little Golden Book)|Golden Books|4|2017
 282|Non Fiction|Quiet: The Power of Introverts in a World That Can't Stop Talking|Susan Cain|20|2012
-283|Non Fiction|Quiet: The Power of Introverts in a World That Can't Stop Talking|Susan Cain|7|2013
 284|Non Fiction|Radical: Taking Back Your Faith from the American Dream|David Platt|9|2010
-285|Non Fiction|Radical: Taking Back Your Faith from the American Dream|David Platt|9|2011
 286|Fiction|Ready Player One: A Novel|Ernest Cline|12|2017
-287|Fiction|Ready Player One: A Novel|Ernest Cline|12|2018
 288|Fiction|Rush Revere and the Brave Pilgrims: Time-Travel Adventures with Exceptional Americans (1)|Rush Limbaugh|12|2013
 289|Fiction|Rush Revere and the First Patriots: Time-Travel Adventures With Exceptional Americans (2)|Rush Limbaugh|12|2014
 290|Non Fiction|Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking|Samin Nosrat|20|2018
-291|Non Fiction|Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking|Samin Nosrat|20|2019
 292|Fiction|Sarah's Key|Tatiana de Rosnay|10|2010
 293|Non Fiction|School Zone - Big Preschool Workbook - Ages 4 and Up, Colors, Shapes, Numbers 1-10, Alphabet, Pre-Writing, Pre-Reading…|School Zone|6|2018
-294|Non Fiction|School Zone - Big Preschool Workbook - Ages 4 and Up, Colors, Shapes, Numbers 1-10, Alphabet, Pre-Writing, Pre-Reading…|School Zone|6|2019
 295|Non Fiction|Secret Garden: An Inky Treasure Hunt and Coloring Book (For Adults, mindfulness coloring)|Johanna Basford|9|2015
 296|Non Fiction|Sh*t My Dad Says|Justin Halpern|11|2010
 297|Non Fiction|Ship of Fools: How a Selfish Ruling Class Is Bringing America to the Brink of Revolution|Tucker Carlson|16|2018
@@ -100,131 +60,68 @@
 299|Fiction|Sookie Stackhouse|Charlaine Harris|25|2009
 300|Non Fiction|Soul Healing Miracles: Ancient and New Sacred Wisdom, Knowledge, and Practical Techniques for Healing the Spiritual…|Zhi Gang Sha|17|2013
 301|Non Fiction|Steve Jobs|Walter Isaacson|20|2011
-302|Non Fiction|Steve Jobs|Walter Isaacson|20|2012
 303|Fiction|Strange Planet (Strange Planet Series)|Nathan W. Pyle|6|2019
 304|Non Fiction|StrengthsFinder 2.0|Gallup|17|2009
-305|Non Fiction|StrengthsFinder 2.0|Gallup|17|2010
-306|Non Fiction|StrengthsFinder 2.0|Gallup|17|2011
-307|Non Fiction|StrengthsFinder 2.0|Gallup|17|2012
-308|Non Fiction|StrengthsFinder 2.0|Gallup|17|2013
-309|Non Fiction|StrengthsFinder 2.0|Gallup|17|2014
-310|Non Fiction|StrengthsFinder 2.0|Gallup|17|2015
-311|Non Fiction|StrengthsFinder 2.0|Gallup|17|2016
-312|Non Fiction|StrengthsFinder 2.0|Gallup|17|2017
 313|Non Fiction|Super Freakonomics: Global Cooling, Patriotic Prostitutes, and Why Suicide Bombers Should Buy Life Insurance|Steven D. Levitt|18|2009
 314|Non Fiction|Switch: How to Change Things When Change Is Hard|Chip Heath|13|2010
 315|Fiction|Sycamore Row (Jake Brigance)|John Grisham|18|2013
 316|Non Fiction|Teach Like a Champion: 49 Techniques that Put Students on the Path to College|Doug Lemov|20|2010
-317|Non Fiction|Teach Like a Champion: 49 Techniques that Put Students on the Path to College|Doug Lemov|20|2011
 318|Non Fiction|The 17 Day Diet: A Doctor's Plan Designed for Rapid Results|Mike Moreno|22|2011
 319|Non Fiction|The 4 Hour Body: An Uncommon Guide to Rapid Fat Loss, Incredible Sex and Becoming Superhuman|Timothy Ferriss|21|2011
 320|Non Fiction|The 5 Love Languages: The Secret to Love That Lasts|Gary Chapman|28|2010
-321|Non Fiction|The 5 Love Languages: The Secret to Love That Lasts|Gary Chapman|28|2011
-322|Non Fiction|The 5 Love Languages: The Secret to Love That Lasts|Gary Chapman|28|2012
-323|Non Fiction|The 5 Love Languages: The Secret to Love That Lasts|Gary Chapman|28|2013
-324|Non Fiction|The 5 Love Languages: The Secret to Love That Lasts|Gary Chapman|28|2014
 325|Non Fiction|The 5 Love Languages: The Secret to Love that Lasts|Gary Chapman|8|2015
-326|Non Fiction|The 5 Love Languages: The Secret to Love that Lasts|Gary Chapman|8|2016
-327|Non Fiction|The 5 Love Languages: The Secret to Love that Lasts|Gary Chapman|8|2017
-328|Non Fiction|The 5 Love Languages: The Secret to Love that Lasts|Gary Chapman|8|2018
-329|Non Fiction|The 5 Love Languages: The Secret to Love that Lasts|Gary Chapman|8|2019
 330|Non Fiction|The 5000 Year Leap|W. Cleon Skousen|12|2009
 331|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|24|2009
-332|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|24|2011
-333|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|24|2012
-334|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|24|2013
-335|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|16|2015
-336|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|16|2016
-337|Non Fiction|The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change|Stephen R. Covey|16|2017
 338|Fiction|The Alchemist|Paulo Coelho|39|2014
 339|Non Fiction|The Amateur|Edward Klein|9|2012
 340|Fiction|The Art of Racing in the Rain: A Novel|Garth Stein|10|2010
-341|Fiction|The Art of Racing in the Rain: A Novel|Garth Stein|10|2011
 342|Non Fiction|The Big Short: Inside the Doomsday Machine|Michael Lewis|17|2010
 343|Fiction|The Blood of Olympus (The Heroes of Olympus (5))|Rick Riordan|11|2014
 344|Non Fiction|The Blood Sugar Solution: The UltraHealthy Program for Losing Weight, Preventing Disease, and Feeling Great Now!|Mark Hyman M.D.|14|2012
 345|Non Fiction|The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma|Bessel van der Kolk M.D.|12|2019
 346|Non Fiction|The Book of Basketball: The NBA According to The Sports Guy|Bill Simmons|53|2009
 347|Fiction|The Book Thief|Markus Zusak|6|2013
-348|Fiction|The Book Thief|Markus Zusak|6|2014
 349|Fiction|The Book with No Pictures|B. J. Novak|8|2014
-350|Fiction|The Book with No Pictures|B. J. Novak|8|2015
 351|Non Fiction|The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics|Daniel James Brown|12|2014
-352|Non Fiction|The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics|Daniel James Brown|12|2015
 353|Fiction|The Casual Vacancy|J.K. Rowling|12|2012
 354|Non Fiction|The China Study: The Most Comprehensive Study of Nutrition Ever Conducted And the Startling Implications for Diet…|Thomas Campbell|21|2011
 355|Non Fiction|The Complete Ketogenic Diet for Beginners: Your Essential Guide to Living the Keto Lifestyle|Amy Ramos|6|2018
-356|Non Fiction|The Complete Ketogenic Diet for Beginners: Your Essential Guide to Living the Keto Lifestyle|Amy Ramos|6|2019
 357|Fiction|The Confession: A Novel|John Grisham|13|2010
 358|Non Fiction|The Constitution of the United States|Delegates of the Constitutional|0|2016
 359|Non Fiction|The Daily Show with Jon Stewart Presents Earth (The Book): A Visitor's Guide to the Human Race|Jon Stewart|11|2010
 360|Fiction|The Day the Crayons Quit|Drew Daywalt|9|2013
-361|Fiction|The Day the Crayons Quit|Drew Daywalt|9|2014
-362|Fiction|The Day the Crayons Quit|Drew Daywalt|9|2015
 363|Non Fiction|The Dukan Diet: 2 Steps to Lose the Weight, 2 Steps to Keep It Off Forever|Pierre Dukan|15|2011
 364|Fiction|The Elegance of the Hedgehog|Muriel Barbery|11|2009
 365|Fiction|The Fault in Our Stars|John Green|13|2012
-366|Fiction|The Fault in Our Stars|John Green|13|2013
-367|Fiction|The Fault in Our Stars|John Green|7|2014
-368|Fiction|The Fault in Our Stars|John Green|13|2014
 369|Non Fiction|The Five Dysfunctions of a Team: A Leadership Fable|Patrick Lencioni|6|2009
-370|Non Fiction|The Five Dysfunctions of a Team: A Leadership Fable|Patrick Lencioni|6|2010
-371|Non Fiction|The Five Dysfunctions of a Team: A Leadership Fable|Patrick Lencioni|6|2011
-372|Non Fiction|The Five Dysfunctions of a Team: A Leadership Fable|Patrick Lencioni|6|2012
-373|Non Fiction|The Five Dysfunctions of a Team: A Leadership Fable|Patrick Lencioni|6|2013
 374|Non Fiction|The Five Love Languages: How to Express Heartfelt Commitment to Your Mate|Gary Chapman|9|2009
 375|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2013
-376|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2015
-377|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2016
-378|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2017
-379|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2018
-380|Non Fiction|The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)|Don Miguel Ruiz|6|2019
 381|Fiction|The Getaway|Jeff Kinney|0|2017
 382|Fiction|The Girl on the Train|Paula Hawkins|18|2015
-383|Fiction|The Girl on the Train|Paula Hawkins|7|2016
 384|Fiction|The Girl Who Kicked the Hornet's Nest (Millennium Trilogy)|Stieg Larsson|14|2010
-385|Fiction|The Girl Who Kicked the Hornet's Nest (Millennium Trilogy)|Stieg Larsson|14|2011
 386|Fiction|The Girl Who Played with Fire (Millennium Series)|Stieg Larsson|9|2010
 387|Fiction|The Girl Who Played with Fire (Millennium)|Stieg Larsson|16|2009
 388|Fiction|The Girl with the Dragon Tattoo (Millennium Series)|Stieg Larsson|2|2009
-389|Fiction|The Girl with the Dragon Tattoo (Millennium Series)|Stieg Larsson|2|2010
 390|Fiction|The Going-To-Bed Book|Sandra Boynton|5|2016
-391|Fiction|The Going-To-Bed Book|Sandra Boynton|5|2017
 392|Fiction|The Goldfinch: A Novel (Pulitzer Prize for Fiction)|Donna Tartt|20|2013
-393|Fiction|The Goldfinch: A Novel (Pulitzer Prize for Fiction)|Donna Tartt|20|2014
 394|Fiction|The Great Gatsby|F. Scott Fitzgerald|7|2012
-395|Fiction|The Great Gatsby|F. Scott Fitzgerald|7|2013
-396|Fiction|The Great Gatsby|F. Scott Fitzgerald|7|2014
 397|Fiction|The Guardians: A Novel|John Grisham|14|2019
 398|Fiction|The Guernsey Literary and Potato Peel Pie Society|Mary Ann Shaffer|10|2009
 399|Fiction|The Handmaid's Tale|Margaret Atwood|7|2017
 400|Fiction|The Harbinger: The Ancient Mystery that Holds the Secret of America's Future|Jonathan Cahn|13|2012
 401|Fiction|The Hate U Give|Angie Thomas|11|2018
 402|Fiction|The Help|Kathryn Stockett|6|2009
-403|Fiction|The Help|Kathryn Stockett|6|2010
-404|Fiction|The Help|Kathryn Stockett|8|2011
-405|Fiction|The Help|Kathryn Stockett|7|2011
 406|Fiction|The House of Hades (Heroes of Olympus, Book 4)|Rick Riordan|14|2013
 407|Fiction|The Hunger Games|Suzanne Collins|14|2010
 408|Fiction|The Hunger Games (Book 1)|Suzanne Collins|8|2011
-409|Fiction|The Hunger Games (Book 1)|Suzanne Collins|8|2012
 410|Fiction|The Hunger Games Trilogy Boxed Set (1)|Suzanne Collins|30|2011
-411|Fiction|The Hunger Games Trilogy Boxed Set (1)|Suzanne Collins|30|2012
 412|Non Fiction|The Immortal Life of Henrietta Lacks|Rebecca Skloot|13|2010
-413|Non Fiction|The Immortal Life of Henrietta Lacks|Rebecca Skloot|9|2011
-414|Non Fiction|The Immortal Life of Henrietta Lacks|Rebecca Skloot|9|2012
 415|Non Fiction|The Instant Pot Electric Pressure Cooker Cookbook: Easy Recipes for Fast & Healthy Meals|Laurel Randolph|7|2017
-416|Non Fiction|The Instant Pot Electric Pressure Cooker Cookbook: Easy Recipes for Fast & Healthy Meals|Laurel Randolph|7|2018
 417|Non Fiction|The Last Lecture|Randy Pausch|9|2009
 418|Fiction|The Last Olympian (Percy Jackson and the Olympians, Book 5)|Rick Riordan|7|2009
-419|Fiction|The Last Olympian (Percy Jackson and the Olympians, Book 5)|Rick Riordan|7|2010
 420|Fiction|The Legend of Zelda: Hyrule Historia|Patrick Thorpe|20|2013
 421|Non Fiction|The Lego Ideas Book: Unlock Your Imagination|Daniel Lipkowitz|13|2011
-422|Non Fiction|The Lego Ideas Book: Unlock Your Imagination|Daniel Lipkowitz|13|2012
 423|Non Fiction|The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing|Marie Kondō|11|2015
-424|Non Fiction|The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing|Marie Kondō|11|2016
-425|Non Fiction|The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing|Marie Kondō|11|2017
-426|Non Fiction|The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing|Marie Kondō|11|2019
 427|Fiction|The Litigators|John Grisham|18|2011
 428|Fiction|The Lost Hero (Heroes of Olympus, Book 1)|Rick Riordan|14|2010
 429|Fiction|The Lost Symbol|Dan Brown|19|2009
@@ -236,12 +133,7 @@
 435|Fiction|The Meltdown (Diary of a Wimpy Kid Book 13)|Jeff Kinney|8|2018
 436|Non Fiction|The Mueller Report|The Washington Post|12|2019
 437|Fiction|The Nightingale: A Novel|Kristin Hannah|11|2015
-438|Fiction|The Nightingale: A Novel|Kristin Hannah|11|2016
 439|Non Fiction|The Official SAT Study Guide|The College Board|40|2010
-440|Non Fiction|The Official SAT Study Guide|The College Board|40|2011
-441|Non Fiction|The Official SAT Study Guide|The College Board|40|2012
-442|Non Fiction|The Official SAT Study Guide|The College Board|40|2013
-443|Non Fiction|The Official SAT Study Guide|The College Board|40|2014
 444|Non Fiction|The Official SAT Study Guide, 2016 Edition (Official Study Guide for the New Sat)|The College Board|36|2016
 445|Fiction|The Paris Wife: A Novel|Paula McLain|16|2011
 446|Non Fiction|The Pioneer Woman Cooks: A Year of Holidays: 140 Step-by-Step Recipes for Simple, Scrumptious Celebrations|Ree Drummond|17|2013
@@ -250,7 +142,6 @@
 449|Non Fiction|The Plant Paradox Cookbook: 100 Delicious Recipes to Help You Lose Weight, Heal Your Gut, and Live Lectin-Free|Dr. Steven R Gundry MD|18|2018
 450|Non Fiction|"The Plant Paradox: The Hidden Dangers in ""Healthy"" Foods That Cause Disease and Weight Gain"|Dr. Steven R Gundry MD|17|2018
 451|Fiction|The Pout-Pout Fish|Deborah Diesen|5|2017
-452|Fiction|The Pout-Pout Fish|Deborah Diesen|5|2018
 453|Non Fiction|The Power of Habit: Why We Do What We Do in Life and Business|Charles Duhigg|21|2012
 454|Fiction|The President Is Missing: A Novel|James Patterson|18|2018
 455|Fiction|The Racketeer|John Grisham|18|2012
@@ -258,13 +149,10 @@
 457|Non Fiction|The Road to Serfdom: Text and Documents--The Definitive Edition (The Collected Works of F. A. Hayek, Volume 2)|F. A. Hayek|14|2010
 458|Fiction|The Serpent's Shadow (The Kane Chronicles, Book 3)|Rick Riordan|12|2012
 459|Fiction|The Shack: Where Tragedy Confronts Eternity|William P. Young|8|2009
-460|Fiction|The Shack: Where Tragedy Confronts Eternity|William P. Young|8|2017
 461|Fiction|The Short Second Life of Bree Tanner: An Eclipse Novella (The Twilight Saga)|Stephenie Meyer|0|2010
 462|Fiction|The Silent Patient|Alex Michaelides|14|2019
 463|Fiction|The Son of Neptune (Heroes of Olympus, Book 2)|Rick Riordan|10|2011
 464|Non Fiction|The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life|Mark Manson|15|2017
-465|Non Fiction|The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life|Mark Manson|15|2018
-466|Non Fiction|The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life|Mark Manson|15|2019
 467|Non Fiction|The Sun and Her Flowers|Rupi Kaur|9|2017
 468|Fiction|The Third Wheel (Diary of a Wimpy Kid, Book 7)|Jeff Kinney|7|2012
 469|Fiction|The Throne of Fire (The Kane Chronicles, Book 2)|Rick Riordan|10|2011
@@ -275,49 +163,24 @@
 474|Fiction|The Ugly Truth (Diary of a Wimpy Kid, Book 5)|Jeff Kinney|12|2010
 475|Non Fiction|The Unofficial Harry Potter Cookbook: From Cauldron Cakes to Knickerbocker Glory--More Than 150 Magical Recipes for…|Dinah Bucholz|10|2019
 476|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2013
-477|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2014
-478|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2015
-479|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2016
-480|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2017
-481|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2018
-482|Fiction|The Very Hungry Caterpillar|Eric Carle|5|2019
 483|Non Fiction|The Whole30: The 30-Day Guide to Total Health and Food Freedom|Melissa Hartwig Urban|16|2015
-484|Non Fiction|The Whole30: The 30-Day Guide to Total Health and Food Freedom|Melissa Hartwig Urban|16|2016
-485|Non Fiction|The Whole30: The 30-Day Guide to Total Health and Food Freedom|Melissa Hartwig Urban|16|2017
 486|Fiction|The Wonderful Things You Will Be|Emily Winfield Martin|10|2016
-487|Fiction|The Wonderful Things You Will Be|Emily Winfield Martin|10|2017
-488|Fiction|The Wonderful Things You Will Be|Emily Winfield Martin|10|2018
-489|Fiction|The Wonderful Things You Will Be|Emily Winfield Martin|10|2019
 490|Fiction|The Wonky Donkey|Craig Smith|4|2018
-491|Fiction|The Wonky Donkey|Craig Smith|4|2019
 492|Non Fiction|The Wright Brothers|David McCullough|16|2015
 493|Non Fiction|Things That Matter: Three Decades of Passions, Pastimes and Politics [Deckled Edge]|Charles Krauthammer|15|2013
 494|Non Fiction|Thinking, Fast and Slow|Daniel Kahneman|19|2011
-495|Non Fiction|Thinking, Fast and Slow|Daniel Kahneman|19|2012
 496|Fiction|Thirteen Reasons Why|Jay Asher|9|2017
 497|Non Fiction|Thomas Jefferson: The Art of Power|Jon Meacham|23|2012
 498|Non Fiction|Three Cups of Tea: One Man's Mission to Promote Peace - One School at a Time|Greg Mortenson|11|2009
-499|Non Fiction|Three Cups of Tea: One Man's Mission to Promote Peace - One School at a Time|Greg Mortenson|11|2010
 500|Non Fiction|Thug Kitchen: The Official Cookbook: Eat Like You Give a F*ck (Thug Kitchen Cookbooks)|Thug Kitchen|23|2014
-501|Non Fiction|Thug Kitchen: The Official Cookbook: Eat Like You Give a F*ck (Thug Kitchen Cookbooks)|Thug Kitchen|23|2015
-502|Non Fiction|Thug Kitchen: The Official Cookbook: Eat Like You Give a F*ck (Thug Kitchen Cookbooks)|Thug Kitchen|23|2016
-503|Non Fiction|Thug Kitchen: The Official Cookbook: Eat Like You Give a F*ck (Thug Kitchen Cookbooks)|Thug Kitchen|23|2017
 504|Non Fiction|Tina Fey: Bossypants|Tina Fey|12|2011
 505|Fiction|To Kill a Mockingbird|Harper Lee|0|2013
-506|Fiction|To Kill a Mockingbird|Harper Lee|0|2014
-507|Fiction|To Kill a Mockingbird|Harper Lee|0|2015
-508|Fiction|To Kill a Mockingbird|Harper Lee|0|2016
-509|Fiction|To Kill a Mockingbird|Harper Lee|7|2019
 510|Non Fiction|Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers|Timothy Ferriss|21|2017
 511|Fiction|Towers of Midnight (Wheel of Time, Book Thirteen)|Robert Jordan|21|2010
 512|Non Fiction|True Compass: A Memoir|Edward M. Kennedy|15|2009
 513|Fiction|Twilight (The Twilight Saga, Book 1)|Stephenie Meyer|9|2009
 514|Fiction|Ultimate Sticker Book: Frozen: More Than 60 Reusable Full-Color Stickers|DK|5|2014
 515|Non Fiction|Unbroken: A World War II Story of Survival, Resilience, and Redemption|Laura Hillenbrand|16|2010
-516|Non Fiction|Unbroken: A World War II Story of Survival, Resilience, and Redemption|Laura Hillenbrand|16|2011
-517|Non Fiction|Unbroken: A World War II Story of Survival, Resilience, and Redemption|Laura Hillenbrand|16|2012
-518|Non Fiction|Unbroken: A World War II Story of Survival, Resilience, and Redemption|Laura Hillenbrand|13|2014
-519|Non Fiction|Unbroken: A World War II Story of Survival, Resilience, and Redemption|Laura Hillenbrand|16|2014
 520|Fiction|Under the Dome: A Novel|Stephen King|20|2009
 521|Non Fiction|Unfreedom of the Press|Mark R. Levin|11|2019
 522|Non Fiction|Unicorn Coloring Book: For Kids Ages 4-8 (US Edition) (Silly Bear Coloring Books)|Silly Bear|4|2019
@@ -330,7 +193,6 @@
 529|Fiction|What Should Danny Do? (The Power to Choose Series)|Adir Levy|13|2019
 530|Non Fiction|What to Expect When You're Expecting|Heidi Murkoff|9|2011
 531|Non Fiction|Wheat Belly: Lose the Wheat, Lose the Weight, and Find Your Path Back to Health|William Davis|6|2012
-532|Non Fiction|Wheat Belly: Lose the Wheat, Lose the Weight, and Find Your Path Back to Health|William Davis|6|2013
 533|Non Fiction|When Breath Becomes Air|Paul Kalanithi|14|2016
 534|Fiction|Where the Crawdads Sing|Delia Owens|15|2019
 535|Fiction|Where the Wild Things Are|Maurice Sendak|13|2009
@@ -339,12 +201,5 @@
 538|Fiction|Winter of the World: Book Two of the Century Trilogy|Ken Follett|15|2012
 539|Non Fiction|Women Food and God: An Unexpected Path to Almost Everything|Geneen Roth|11|2010
 540|Fiction|Wonder|R. J. Palacio|9|2013
-541|Fiction|Wonder|R. J. Palacio|9|2014
-542|Fiction|Wonder|R. J. Palacio|9|2015
-543|Fiction|Wonder|R. J. Palacio|9|2016
-544|Fiction|Wonder|R. J. Palacio|9|2017
 545|Fiction|Wrecking Ball (Diary of a Wimpy Kid Book 14)|Jeff Kinney|8|2019
 546|Non Fiction|You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life|Jen Sincero|8|2016
-547|Non Fiction|You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life|Jen Sincero|8|2017
-548|Non Fiction|You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life|Jen Sincero|8|2018
-549|Non Fiction|You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life|Jen Sincero|8|2019

@@ -8,7 +8,7 @@ df1 = df.iloc[:200]
 df1.index.names = ['id']
 
 df2 = df[200:]
-df2.drop_duplicates()
+df2 = df2.drop_duplicates(subset='Name')
 df2 = df2[~df2['Name'].isin(df1['Name'])]
 df2.index.names = ['id']
 

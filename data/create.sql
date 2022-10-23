@@ -40,5 +40,6 @@ CREATE TABLE IF NOT EXISTS recommendations (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     authorID INT NOT NULL,
     genre TEXT NOT NULL,
-    title TEXT NOT NULL
+    title TEXT NOT NULL,
+	purchasePrice TEXT NOT NULL
 );
