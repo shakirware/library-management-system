@@ -36,7 +36,7 @@ class Database:
     def parse_book_file(self, text_file):
         """The book data text file is put into a dictionary."""
         books = []
-        with open(text_file) as file:
+        with open(text_file, encoding="utf8") as file:
             for line in file:
                 book_string = line.rstrip().split('|')
                 book = {

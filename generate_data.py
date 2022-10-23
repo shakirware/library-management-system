@@ -77,10 +77,6 @@ def generate_books(keywords):
         parse_books(book_data)
         save_file("Book_Info.txt", book_list)
 
-
-
-
-
 def generate_loans(amount):
     used_books = []
     for i in range(1, amount):
