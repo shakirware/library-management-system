@@ -1,4 +1,7 @@
-
+#https://github.com/Just-Moh-it/HotinGo
+#https://www.clickminded.com/button-generator/
+#https://coolors.co/c9cad9-d1d2f9-a3bcf9-7796cb-576490
+#
 import tkinter as tk
 from tkinter import (
     Toplevel,
@@ -8,6 +11,7 @@ from tkinter import (
     PhotoImage,
     messagebox,
     StringVar,
+    Entry
 )
 
 from database import Database
@@ -162,6 +166,30 @@ class HomeFrame(Frame):
         )
 
         self.canvas.place(x=0, y=0)
+
+        self.canvas.entry_image_1 = PhotoImage(file="./assets/entry.png")
+        self.entry_bg_1 = self.canvas.create_image(115.0, 81.0, image=self.canvas.entry_image_1)
+        self.entry_1 = Entry(
+            self,
+            bd=0,
+            bg="#EFEFEF",
+            highlightthickness=0,
+            font=("Montserrat Bold", 150),
+        )
+        self.entry_1.place(x=55.0, y=30.0 + 2, width=120.0, height=0)
+
+        self.canvas.create_text(
+            56.0,
+            45.0,
+            anchor="nw",
+            text="Vacant",
+            fill="#5E95FF",
+            font=("Montserrat Bold", 14 * -1),
+        )
+
+
+
+
 
 class SearchFrame(Frame):
     def __init__(self, parent, controller=None, *args, **kwargs):
