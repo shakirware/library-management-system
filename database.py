@@ -89,37 +89,37 @@ class Database:
         """The database tables are populated with records from the text file."""
         books = self.parse_book_file("data/Book_Info.txt")
         for book in books:
+        
             author_exist = self.cursor.execute(
                 "SELECT 1 FROM authors WHERE authorName = ?", (book["author"],)
             ).fetchone()
+            
             if not author_exist:
                 self.cursor.execute(
                     "INSERT INTO authors (authorName) VALUES(?)", (book["author"],)
                 )
+            
             book_exist = self.cursor.execute(
                 "SELECT 1 FROM book WHERE title = ? AND genre = ?",
                 (book["title"], book["genre"]),
             ).fetchone()
-            # if book not already in book table then add to bookcopies and book
-            if not book_exist:
+            
+            # if book exists in table then only add to book copies
+            if book_exist:    
                 self.cursor.execute(
-                    "INSERT INTO book (authorid, genre, title) VALUES(last_insert_rowid(), ?, ?)",
-                    (book["genre"], book["title"]),
+                "INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) SELECT book.id, ?, ? FROM book WHERE book.title = ?;",
+                (book["purchase_date"], book["purchase_price"], book["title"]),
                 )
+            else:
+                self.cursor.execute(
+                    "INSERT INTO book (authorid, genre, title) SELECT authors.id, ?, ? FROM authors WHERE authorName = ?;",
+                        (book["genre"], book["title"], book["author"]),
+                    )
                 self.cursor.execute(
                     "INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) VALUES(last_insert_rowid(), ?, ?);",
                     (book["purchase_date"], book["purchase_price"]),
-                )
-            else:
-                # book already in book table so grab and id and insert into bookcopies
-                book_id = self.cursor.execute(
-                    "SELECT id FROM book WHERE title = ? AND genre = ?",
-                    (book["title"], book["genre"]),
-                ).fetchone()
-                self.cursor.execute(
-                    "INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) VALUES(?, ?, ?);",
-                    (book_id[0], book["purchase_date"], book["purchase_price"]),
-                )
+                    )
+               
         self.conn.commit()
 
     def populate_rec_table(self):
@@ -232,3 +232,26 @@ class Database:
             "SELECT returnDate from loans WHERE bookCopiesID = ?;",
             (book_id,),
         ).fetchall()
+        
+    def get_book_copies_count(self):
+        return self.cursor.execute(
+            "SELECT COUNT(*) FROM bookCopies;",
+        ).fetchall()
+        
+    def get_book_count(self):
+        return self.cursor.execute(
+            "SELECT COUNT(*) FROM book;",
+        ).fetchall()
+        
+    def get_books_loan_count(self):
+        return self.cursor.execute(
+            "SELECT COUNT(*) FROM loans WHERE returnDate is NULL;",
+        ).fetchall()
+        
+    def get_books_resv_count(self):
+        return self.cursor.execute(
+            "SELECT COUNT(*) FROM loans WHERE reservationDate IS NOT NULL;",
+        ).fetchall() 
+        
+        
+        
