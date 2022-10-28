@@ -2,6 +2,10 @@ import sqlite3
 import pandas as pd
 
 
+# USE CONSTANTS FOR SQL QUERIES INSEAD OF FUNCTIONS - CALL EACH CONSTANT IN ONE FUNCTION
+# Potentially turn database query into an object
+
+
 class Database:
     """Interacts with an sqlite database."""
 

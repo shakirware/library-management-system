@@ -9,14 +9,14 @@ class Select(Database):
     def __init__(self, parent):
         self.parent = parent
         rec_table = self.parent.get_rec_table()
-        self.df = pd.DataFrame(rec_table)
+        self.database = pd.DataFrame(rec_table)
 
     def get_similar_book(self, book_title, amount):
         books = []
         query = self.parent.get_info_from_title(book_title)
         temp_df = pd.concat(
             [
-                self.df,
+                self.database,
                 pd.DataFrame.from_records(
                     [
                         {
