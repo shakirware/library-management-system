@@ -14,7 +14,7 @@ class Checkout(Database):
 
     def withdraw(self, book_id, member_id):
         book_exist = self.parent.get_book_exist(book_id)
-        
+
         dates = self.parent.get_book_return_dates(book_id)
         # check book_id is valid
         if book_exist:

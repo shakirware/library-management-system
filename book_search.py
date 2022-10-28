@@ -1,5 +1,6 @@
 from database import Database
 
+
 class Search(Database):
     def __init__(self, parent):
         self.parent = parent
@@ -23,7 +24,7 @@ class Search(Database):
             WHERE authors.authorname LIKE '%{author}%';
         """
         )
-        
+
     def book_title_author_search(self, title, author):
         return self.parent.query_database(
             f"""
@@ -36,5 +37,3 @@ class Search(Database):
             authors.authorname LIKE '%{author}%';
         """
         )
-        
-       
