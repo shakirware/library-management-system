@@ -68,7 +68,7 @@ class Select(Database):
             similar_books = self.get_similar_book(title, 5)
             for similar_book in similar_books:
                 new_cost = cost + int(similar_book["purchasePrice"])
-                if new_cost < budget:
+                if new_cost < int(budget):
                     book_list.append(similar_book)
                     cost += int(similar_book["purchasePrice"])
         return book_list, cost
