@@ -7,7 +7,7 @@ class Return(Database):
         self.parent = parent
 
     def is_book_available(self, book_id):
-        dates = self.parent.get_book_on_loan(book_id)
+        dates = self.parent.get_book_return_dates(book_id)
         if any(date[0] is None for date in dates):
             return False
         return True

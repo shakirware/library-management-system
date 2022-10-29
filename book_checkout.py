@@ -36,5 +36,6 @@ class Checkout(Database):
                 pass
             else:
                 return False, "Member already has a reservation."
-        self.parent.insert_reservation(book_id, member_id, resv_date)
+        self.parent.insert_loan(book_id, member_id, resv_date=resv_date)
+        # self.parent.insert_reservation(book_id, member_id, resv_date)
         return True, f"Reservation confirmed for {resv_date}"

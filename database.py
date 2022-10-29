@@ -1,21 +1,21 @@
 import sqlite3
 import pandas as pd
 
-
-# USE CONSTANTS FOR SQL QUERIES INSEAD OF FUNCTIONS - CALL EACH CONSTANT IN ONE FUNCTION
-# Potentially turn database query into an object
+from data.constants import *
 
 
 class Database:
-    """Interacts with an sqlite database."""
+    """This class represents an SQLite3 database.
+
+    Attributes:
+        conn: A Connection object that represents an open SQLite database.
+        cursor: A Cursor object that represents a database cursor.
+        filename: The path of the database file to be opened/created.
+        script: The path of an SQL script.
+
+    """
 
     def __init__(self, filename="data/Library.db", script="data/create.sql"):
-        """Constructor.
-
-        Args:
-          filename: str, name of file to be made.
-          script: str, name of sql script that creates the tables.
-        """
         self.filename = filename
         self.script = script
         self.connect()
@@ -24,23 +24,37 @@ class Database:
             sql_script = sql.read()
             self.execute_script(sql_script)
 
-        if not self.query_database("SELECT COUNT(*) FROM BOOK")[0][0]:
+        book_count = self.get_book_count()
+        if not book_count:
             self.populate_loan_table()
             self.populate_book_table()
             self.populate_rec_table()
 
     def connect(self):
-        """Opens a connection to the sqlite database."""
+        """Opens a connection to the SQLite database."""
         self.conn = sqlite3.connect(self.filename)
         self.cursor = self.conn.cursor()
 
     def execute_script(self, sql):
-        """Executes a .sql script."""
+        """Execute the statements within an SQL script and commit the changes.
+
+        Args:
+            sql: The sql script.
+
+        """
         self.cursor.executescript(sql)
         self.conn.commit()
 
     def parse_book_file(self, text_file):
-        """The book data text file is put into a dictionary."""
+        """Open the book data file and parse it.
+
+        Args:
+            text_file: The book data file.
+
+        Returns:
+            books: An array of books.
+
+        """
         books = []
         with open(text_file, encoding="utf8") as file:
             for line in file:
@@ -57,6 +71,15 @@ class Database:
         return books
 
     def parse_loan_file(self, text_file):
+        """Open the loan data file and parse it.
+
+        Args:
+            text_file: The loan data file.
+
+        Returns:
+            loans: An array of loan records.
+
+        """
         loans = []
         with open(text_file) as file:
             for line in file:
@@ -75,10 +98,11 @@ class Database:
         return loans
 
     def populate_loan_table(self):
+        """Insert the loan data into the SQLite database."""
         loans = self.parse_loan_file("data/Loan_Reservation_History.txt")
         for loan in loans:
             self.cursor.execute(
-                "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
+                INSERT_LOAN_SQL,
                 (
                     loan["bookCopiesID"],
                     loan["member_id"],
@@ -90,169 +114,176 @@ class Database:
         self.conn.commit()
 
     def populate_book_table(self):
-        """The database tables are populated with records from the text file."""
+        """Insert the book data into the SQLite database"""
         books = self.parse_book_file("data/Book_Info.txt")
         for book in books:
 
             author_exist = self.cursor.execute(
-                "SELECT 1 FROM authors WHERE authorName = ?", (book["author"],)
+                AUTHOR_EXIST_SQL, (book["author"],)
             ).fetchone()
 
             if not author_exist:
-                self.cursor.execute(
-                    "INSERT INTO authors (authorName) VALUES(?)", (book["author"],)
-                )
+                self.cursor.execute(INSERT_AUTHOR_SQL, (book["author"],))
 
             book_exist = self.cursor.execute(
-                "SELECT 1 FROM book WHERE title = ? AND genre = ?",
+                BOOK_EXIST_SQL,
                 (book["title"], book["genre"]),
             ).fetchone()
 
-            # if book exists in table then only add to book copies
             if book_exist:
                 self.cursor.execute(
-                    "INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) SELECT book.id, ?, ? FROM book WHERE book.title = ?;",
-                    (book["purchase_date"], book["purchase_price"], book["title"]),
+                    INSERT_BOOKCOPIES_SQL,
+                    (book["purchase_date"],
+                     book["purchase_price"], book["title"]),
                 )
             else:
                 self.cursor.execute(
-                    "INSERT INTO book (authorid, genre, title) SELECT authors.id, ?, ? FROM authors WHERE authorName = ?;",
+                    INSERT_BOOK_SQL,
                     (book["genre"], book["title"], book["author"]),
                 )
                 self.cursor.execute(
-                    "INSERT INTO bookCopies (bookid, purchaseDate, purchasePrice) VALUES(last_insert_rowid(), ?, ?);",
+                    INSERT_BOOKCOPIES_LAST_SQL,
                     (book["purchase_date"], book["purchase_price"]),
                 )
 
         self.conn.commit()
 
     def populate_rec_table(self):
+        """Insert the recommendation records into the SQLite database."""
         books = self.parse_book_file("data/Book_Recommendations.txt")
         for book in books:
             author_exist = self.cursor.execute(
-                "SELECT 1 FROM authors WHERE authorName = ?", (book["author"],)
+                AUTHOR_EXIST_SQL, (book["author"],)
             ).fetchone()
             if not author_exist:
-                self.cursor.execute(
-                    "INSERT INTO authors (authorName) VALUES(?)", (book["author"],)
-                )
+                self.cursor.execute(INSERT_AUTHOR_SQL, (book["author"],))
             self.cursor.execute(
-                "INSERT INTO recommendations (authorid, genre, title, purchasePrice) VALUES(last_insert_rowid(), ?, ?, ?)",
+                INSERT_RECOMMENDATION_SQL,
                 (book["genre"], book["title"], book["purchase_price"]),
             )
         self.conn.commit()
 
     def query_database(self, query):
+        """Execute an SQL statement and return the results.
+
+        Args:
+            query: An SQL statement.
+
+        Returns:
+            The rows of a query result.
+
+        """
         return self.cursor.execute(query).fetchall()
 
     def insert_loan(
         self, book_id, member_id, checkout_date=None, return_date=None, resv_date=None
     ):
+        """Insert a loan record into the SQLite Database.
+
+        Args:
+            book_id: The book id.
+            member_id: The member id.
+            checkout_date: The checkout date (optional).
+            return_date: The return date (optional).
+            resv_date: The reservation date (optional).
+
+        """
         self.cursor.execute(
-            "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
+            INSERT_LOAN_SQL,
             (book_id, member_id, checkout_date, return_date, resv_date),
         )
         self.conn.commit()
 
-    def insert_reservation(self, book_id, member_id, resv_date):
-        self.cursor.execute(
-            "INSERT INTO loans (bookCopiesID, memberID, checkoutDate, returnDate, reservationDate) VALUES (?, ?, ?, ?, ?)",
-            (book_id, member_id, None, None, resv_date),
-        )
-        self.conn.commit()
-
     def update_book_return(self, book_id, return_date):
+        """Update the return date for a loan record.
+
+        Args:
+            book_id: The book id.
+            return_date: The return date e.g 29-10-2022
+
+        """
         self.cursor.execute(
-            "UPDATE loans SET returnDate = ? WHERE bookCopiesID = ?;",
+            UPDATE_LOAN_SQL,
             (return_date, book_id),
         )
         self.conn.commit()
 
     def get_info_from_title(self, book_title):
+        """Get a book's author and genre from the title.
+
+        Args:
+            book_title: The book title.
+
+        Returns:
+            The rows a book's information - title, author and genre.
+
+        """
         return self.cursor.execute(
-            "SELECT book.title, authors.authorName, book.genre from book INNER JOIN authors ON book.authorid = authors.id WHERE book.title = ?",
+            BOOK_INFO_SQL,
             (book_title,),
         ).fetchall()
 
     def get_popular_books(self):
-        return self.cursor.execute(
-            """
-        SELECT loans.bookCopiesID, book.title, book.genre, authors.authorName, COUNT(loans.checkoutDate) from loans 
-        INNER JOIN bookCopies ON loans.bookCopiesID = bookCopies.id
-        INNER JOIN book ON bookCopies.bookID = book.id 
-        INNER JOIN authors ON book.authorID = authors.id
-        GROUP BY loans.bookCopiesID ORDER BY COUNT(loans.checkoutDate) DESC;"""
-        ).fetchall()
+        return self.cursor.execute(POPULAR_BOOK_SQL).fetchall()
 
     def get_rec_table(self):
         return pd.read_sql_query(
-            """
-            SELECT recommendations.id, authors.authorName, recommendations.genre, recommendations.title, recommendations.purchasePrice
-            FROM recommendations
-            INNER JOIN authors
-            ON recommendations.authorID=authors.id;
-            """,
+            GET_RECOMMENDATIONS_SQL,
             self.conn,
         )
 
-    def get_book_on_loan(self, book_id):
-        return self.cursor.execute(
-            "SELECT returnDate from loans WHERE bookCopiesID = ?;",
-            (book_id,),
-        ).fetchall()
-
     def get_is_book_valid(self, book_id):
         return self.cursor.execute(
-            "SELECT * FROM BookCopies WHERE id = ?",
+            BOOK_VALID_SQL,
             (book_id,),
         ).fetchall()
 
     def get_is_book_reserved(self, book_id):
         return self.cursor.execute(
-            "SELECT reservationDate from loans WHERE bookCopiesID = ?",
+            BOOK_RESERVED_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_info_reserved(self, book_id):
         return self.cursor.execute(
-            "SELECT reservationDate, memberid from loans WHERE bookCopiesID = ?;",
+            BOOK_RESERVED_INFO_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_reserved_member(self, book_id, member_id):
         return self.cursor.execute(
-            "SELECT reservationDate from loans WHERE bookCopiesID = ? AND memberid = ?;",
+            BOOK_RESERVED_MEMBER_SQL,
             (book_id, member_id),
         ).fetchall()
 
     def get_book_exist(self, book_id):
         return self.cursor.execute(
-            "SELECT 1 FROM bookCopies WHERE id = ?;",
+            BOOK_ID_EXIST_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_return_dates(self, book_id):
         return self.cursor.execute(
-            "SELECT returnDate from loans WHERE bookCopiesID = ?;",
+            LOAN_RETURN_DATES_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_copies_count(self):
         return self.cursor.execute(
-            "SELECT COUNT(*) FROM bookCopies;",
+            BOOKCOPIES_COUNT_SQL,
         ).fetchall()
 
     def get_book_count(self):
         return self.cursor.execute(
-            "SELECT COUNT(*) FROM book;",
+            BOOK_COUNT_SQL,
         ).fetchall()
 
     def get_books_loan_count(self):
         return self.cursor.execute(
-            "SELECT COUNT(*) FROM loans WHERE returnDate is NULL;",
+            LOAN_BOOK_COUNT_SQL,
         ).fetchall()
 
     def get_books_resv_count(self):
         return self.cursor.execute(
-            "SELECT COUNT(*) FROM loans WHERE reservationDate IS NOT NULL;",
+            LOAN_RESERVATION_COUNT_SQL,
         ).fetchall()

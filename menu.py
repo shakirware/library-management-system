@@ -36,9 +36,6 @@ class MainWindow(Toplevel):
         self.return_ = Return(self.database)
         self.select = Select(self.database)
 
-        self.bind("<ButtonPress-1>", lambda event: self.capture(True))
-        self.bind("<ButtonRelease-1>", lambda event: self.capture(False))
-
         self.canvas = Canvas(
             self,
             bg="#16262E",
@@ -135,16 +132,6 @@ class MainWindow(Toplevel):
         self.handle_btn_press("home")
 
         self.current_window.place(x=215, y=0, width=1013.0, height=506.0)
-
-    def motion(self, event):
-        x, y = event.x, event.y
-        print("{}, {}".format(x, y))
-
-    def capture(self, flag):
-        if flag:
-            self.bind("<Motion>", self.motion)
-        else:
-            self.unbind("<Motion>")
 
     def clear_listbox(self, listbox):
         listbox.delete("0", tk.END)
