@@ -20,7 +20,7 @@ class Database:
         self.script = script
         self.connect()
 
-        with open(self.script) as sql:
+        with open(self.script, encoding='UTF-8') as sql:
             sql_script = sql.read()
             self.execute_script(sql_script)
 
@@ -56,7 +56,7 @@ class Database:
 
         """
         books = []
-        with open(text_file, encoding="utf8") as file:
+        with open(text_file, encoding='UTF-8') as file:
             for line in file:
                 book_string = line.rstrip().split("|")
                 book = {
@@ -81,7 +81,7 @@ class Database:
 
         """
         loans = []
-        with open(text_file) as file:
+        with open(text_file, encoding='UTF-8') as file:
             for line in file:
                 loan_string = line.rstrip().split("|")
                 loan_string = list(
@@ -133,8 +133,7 @@ class Database:
             if book_exist:
                 self.cursor.execute(
                     INSERT_BOOKCOPIES_SQL,
-                    (book["purchase_date"],
-                     book["purchase_price"], book["title"]),
+                    (book["purchase_date"], book["purchase_price"], book["title"]),
                 )
             else:
                 self.cursor.execute(
@@ -215,7 +214,7 @@ class Database:
             book_title: The book title.
 
         Returns:
-            The rows a book's information - title, author and genre.
+            The rows of a book's information - title, author and genre.
 
         """
         return self.cursor.execute(
@@ -224,66 +223,178 @@ class Database:
         ).fetchall()
 
     def get_popular_books(self):
+        """Get a list of the most popular books.
+
+        Returns:
+            The rows of the most popular books - book id, book title, book genre and author name.
+
+        """
         return self.cursor.execute(POPULAR_BOOK_SQL).fetchall()
 
     def get_rec_table(self):
+        """Get the recommendation table.
+
+        Returns:
+            Return the Recommendation table.
+
+        """
         return pd.read_sql_query(
             GET_RECOMMENDATIONS_SQL,
             self.conn,
         )
 
-    def get_is_book_valid(self, book_id):
-        return self.cursor.execute(
-            BOOK_VALID_SQL,
-            (book_id,),
-        ).fetchall()
-
     def get_is_book_reserved(self, book_id):
+        """Check if a book id is reserved by a member.
+
+        Args:
+            book_id: The book's id.
+
+        Returns:
+            Empty rows if not reserved, book record if reserved.
+
+        """
         return self.cursor.execute(
             BOOK_RESERVED_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_info_reserved(self, book_id):
+        """Get the reservation date and member of a reserved book.
+
+        Args:
+            book_id: The book's id.
+
+        Returns:
+            Reservation record if reserved.
+
+        """
         return self.cursor.execute(
             BOOK_RESERVED_INFO_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_reserved_member(self, book_id, member_id):
+        """Get the reservation record of a book and member.
+
+        Args:
+            book_id: The book's id.
+            member_id: The member's id.
+
+        Returns:
+            Reservation record if reserved.
+
+        """
         return self.cursor.execute(
             BOOK_RESERVED_MEMBER_SQL,
             (book_id, member_id),
         ).fetchall()
 
     def get_book_exist(self, book_id):
+        """Check if a book id is in the book table.
+
+        Args:
+            book_id: The book's id.
+
+        Returns:
+            Empty rows if invalid, 1 if valid.
+
+        """
         return self.cursor.execute(
             BOOK_ID_EXIST_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_return_dates(self, book_id):
+        """Get return date of a book.
+
+        Args:
+            book_id: The book's id.
+
+        Returns:
+            Return date of book.
+
+        """
         return self.cursor.execute(
             LOAN_RETURN_DATES_SQL,
             (book_id,),
         ).fetchall()
 
     def get_book_copies_count(self):
+        """Get a count of books in the bookCopies table.
+
+        Returns:
+            BookCopies table book count.
+
+        """
         return self.cursor.execute(
             BOOKCOPIES_COUNT_SQL,
         ).fetchall()
 
     def get_book_count(self):
+        """Get a count of books in the book table.
+
+        Returns:
+            Book table book count.
+
+        """
         return self.cursor.execute(
             BOOK_COUNT_SQL,
         ).fetchall()
 
     def get_books_loan_count(self):
+        """Get a count of how many books on loan.
+
+        Returns:
+            Loaned book count.
+
+        """
         return self.cursor.execute(
             LOAN_BOOK_COUNT_SQL,
         ).fetchall()
 
     def get_books_resv_count(self):
+        """Get a count of reserved books.
+
+        Returns:
+            Reserved book count.
+
+        """
         return self.cursor.execute(
             LOAN_RESERVATION_COUNT_SQL,
+        ).fetchall()
+
+    def book_title_search_(self, book_title):
+        """Search for a book title using wildcard.
+
+        Returns:
+            Rows returned from book search.
+
+        """
+        return self.cursor.execute(
+            BOOK_TITLE_SEARCH_SQL,
+            ("%" + book_title + "%",),
+        ).fetchall()
+
+    def book_author_search_(self, author):
+        """Search for an author using wildcard.
+
+        Returns:
+            Rows returned from author search.
+
+        """
+        return self.cursor.execute(
+            BOOK_AUTHOR_SEARCH_SQL,
+            ("%" + author + "%",),
+        ).fetchall()
+
+    def book_title_author_search_(self, title, author):
+        """Search for a book title and an author using wildcard.
+
+        Returns:
+            Rows returned from title and author search.
+
+        """
+        return self.cursor.execute(
+            BOOK_TITLE_AUTHOR_SEARCH_SQL,
+            ("%" + title + "%", "%" + author + "%"),
         ).fetchall()

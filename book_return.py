@@ -12,9 +12,6 @@ class Return(Database):
             return False
         return True
 
-    def is_book_valid(self, book_id):
-        return len(self.parent.get_is_book_valid(book_id)) > 0
-
     def is_book_reserved(self, book_id):
         is_reserved = self.parent.get_is_book_reserved(book_id)
         if not all(x[0] is None for x in is_reserved):
@@ -25,9 +22,9 @@ class Return(Database):
 
     def return_book(self, book_id):
         # an appropriate message should be displayed if the book is reserved by a member.
-        valid = self.is_book_valid(book_id)
+        book_exist = self.parent.get_book_exist(book_id)
         available = self.is_book_available(book_id)
-        if valid:
+        if book_exist:
             if not available:
                 today = datetime.today().strftime("%Y-%m-%d")
                 self.parent.update_book_return(book_id, today)

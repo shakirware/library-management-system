@@ -1,4 +1,3 @@
-# https://towardsdatascience.com/using-cosine-similarity-to-build-a-movie-recommendation-system-ae7f20842599
 from database import Database
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -6,12 +5,31 @@ import pandas as pd
 
 
 class Select(Database):
+    """This class contains methods to recommend books
+    and genres for the Librarian.
+
+    Attributes:
+        parent: A reference to the Database object.
+        database: A dataframe containing the recommendation table.
+
+    """
+    
     def __init__(self, parent):
         self.parent = parent
         rec_table = self.parent.get_rec_table()
         self.database = pd.DataFrame(rec_table)
 
     def get_similar_book(self, book_title, amount):
+        """Gets a list of similar books.
+
+        Args:
+            book_title: The book's title.
+            amount: Number of books to be returned.
+
+        Returns:
+            An array of book records.
+
+        """
         books = []
         query = self.parent.get_info_from_title(book_title)
         temp_df = pd.concat(
@@ -41,28 +59,76 @@ class Select(Database):
         return books
 
     def create_count_matrix(self, features):
+        """Creates a count matrix using CountVectorizer()
+        The text is counted to form a matrix. This method converts text data 
+        into numerical data.
+
+        Args:
+            features: The book features.
+
+        Returns:
+            A count matrix.
+
+        """
         cv = CountVectorizer()
         return cv.fit_transform(features)
 
     def get_cosine_similarity(self, count_matrix, index):
+        """Get the cosine similarity of an index within the count matrix. 
+
+        Args:
+            count_matrix: A count matrix derived from book features.
+            index: Index of the book.
+
+        Returns:
+            A list of books in desc order with respect to the cosine similarity
+            of the given index.
+
+        """
         cosine_sim = cosine_similarity(count_matrix)
         similar_books = list(enumerate(cosine_sim[index]))
         return sorted(similar_books, key=lambda x: x[1], reverse=True)
 
     def get_index(self, book_title, df):
+        """Get the index of a book given the title. 
+
+        Args:
+            book_title: The book's title.
+            df: Recommendation table dataframe..
+
+        Returns:
+            The index of the book within the dataframe.
+
+        """
         return df.loc[df["title"] == book_title].index[0]
 
     def get_book_from_index(self, index, df):
+        """Get the book record given the index.
+
+        Args:
+            index: Index of the book.
+            df: Recommendation table dataframe..
+
+        Returns:
+            The record of the book within the dataframe.
+
+        """
         return df.loc[df.index == index].to_dict(orient="records")[0]
 
-    def get_popular_books(self, amount):
-        popular_books = self.parent.get_popular_books()[:amount]
-        return popular_books
-
     def recommend_books(self, budget):
+        """Get a list of books to recommend to the librarian,
+        given a budget.
+
+        Args:
+            budget: Maximum cost of all the books.
+           
+        Returns:
+            A list of books to recommend and the cost of them.
+
+        """
         book_list = []
         cost = 0
-        books = self.get_popular_books(5)
+        books = self.parent.get_popular_books()[:5]
         for book in books:
             title = book[1]
             similar_books = self.get_similar_book(title, 5)
