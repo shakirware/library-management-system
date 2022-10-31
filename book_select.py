@@ -2,6 +2,7 @@ from database import Database
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 class Select(Database):
@@ -55,7 +56,7 @@ class Select(Database):
         similar_books = self.get_cosine_similarity(count_matrix, book_index)
         for similar_book in similar_books[1 : amount + 1]:
             book_info = self.get_book_from_index(similar_book[0], temp_df)
-            books.append(book_info)
+            books.append((book_info, similar_book[1]))
         return books
 
     def create_count_matrix(self, features):
@@ -126,15 +127,30 @@ class Select(Database):
             A list of books to recommend and the cost of them.
 
         """
+        x = []
+        y = []
         book_list = []
         cost = 0
         books = self.parent.get_popular_books()[:5]
         for book in books:
             title = book[1]
             similar_books = self.get_similar_book(title, 5)
-            for similar_book in similar_books:
+            for similar_book, similarity in similar_books:
+               
                 new_cost = cost + int(similar_book["purchasePrice"])
                 if new_cost < int(budget):
+                    x.append(similar_book['title'])
+                    y.append(similarity)
                     book_list.append(similar_book)
                     cost += int(similar_book["purchasePrice"])
+        self.create_graph(x, y)
         return book_list, cost
+
+    def create_graph(self, x, y):
+        plt.plot(x, y)
+        plt.title('Cosine similarity of books')
+        plt.xlabel('Book Title')
+        plt.ylabel('Similarity')
+        plt.xticks(rotation=90)
+        plt.tight_layout()
+        plt.savefig('./assets/books_similarity.png')

@@ -20,7 +20,7 @@ from book_search import Search
 from book_checkout import Checkout
 from book_return import Return
 from book_select import Select
-
+from PIL import Image, ImageTk
 
 class MainWindow(Toplevel):
     def __init__(self, *args, **kwargs):
@@ -549,6 +549,15 @@ class SelectFrame(Frame):
         for book in book_list:
             string = f"{book['title']} by {book['authorName']} - {book['genre']}"
             self.listbox.insert(tk.END, string)
+        
+        
+        image = Image.open("./assets/books_similarity.png")
+ 
+        resize_image = image.resize((250, 250))
+ 
+        self.canvas.image_2 = ImageTk.PhotoImage(resize_image)
+        
+        self.canvas.create_image(150.0, 350.0, image=self.canvas.image_2)
 
     def clear(self):
         self.parent.clear_listbox(self.listbox)
@@ -648,7 +657,7 @@ class CheckoutFrame(Frame):
 
     def checkout(self, member_id, book_id):
         member_id, book_id = int(member_id), int(book_id)
-        book_valid = self.parent.checkout.is_book_valid(book_id)
+        book_valid = self.parent.database.get_book_exist(book_id)
         member_valid = self.parent.checkout.is_member_valid(member_id)
         self.canvas.itemconfigure(self.textbox, text="")
 
