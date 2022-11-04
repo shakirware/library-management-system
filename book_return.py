@@ -32,3 +32,22 @@ class Return(Database):
             else:
                 return False, "The book is already available."
         return False, "The book is invalid."
+        
+    def return_books(self, id_array):
+        book_returned = []
+        book_available = []
+        
+        for book_id in id_array:
+            book_exist = self.parent.get_book_exist(book_id)
+            available = self.is_book_available(book_id)
+            if book_exist:
+                if not available:
+                    today = datetime.today().strftime("%Y-%m-%d")
+                    self.parent.update_book_return(book_id, today)
+                    book_returned.append(book_id)
+                else:
+                    book_available.append(book_id)
+            
+        return book_returned, book_available
+        
+        

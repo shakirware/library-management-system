@@ -222,14 +222,14 @@ class Database:
             (book_title,),
         ).fetchall()
 
-    def get_popular_books(self):
-        """Get a list of the most popular books.
+    def get_popular_books(self, date):
+        """Get a list of the most popular books from the date given.
 
         Returns:
             The rows of the most popular books - book id, book title, book genre and author name.
 
         """
-        return self.cursor.execute(POPULAR_BOOK_SQL).fetchall()
+        return self.cursor.execute(POPULAR_BOOK_SQL, (date,)).fetchall()
 
     def get_rec_table(self):
         """Get the recommendation table.
@@ -398,3 +398,6 @@ class Database:
             BOOK_TITLE_AUTHOR_SEARCH_SQL,
             ("%" + title + "%", "%" + author + "%"),
         ).fetchall()
+
+    def book_most_reserved(self):
+        return self.cursor.execute(BOOK_MOST_RESERVED_SQL).fetchall()

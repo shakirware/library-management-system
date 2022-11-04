@@ -1,6 +1,8 @@
 from database import Database
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from datetime import date
+from dateutil.relativedelta import relativedelta
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -116,7 +118,7 @@ class Select(Database):
         """
         return df.loc[df.index == index].to_dict(orient="records")[0]
 
-    def recommend_books(self, budget):
+    def recommend_new_books(self, budget):
         """Get a list of books to recommend to the librarian,
         given a budget.
 
@@ -131,20 +133,25 @@ class Select(Database):
         y = []
         book_list = []
         cost = 0
-        books = self.parent.get_popular_books()[:5]
+        book_date = (date.today() + relativedelta(months=-2)).strftime("%Y-%m-%d")
+        books = self.parent.get_popular_books(book_date)[:5]
         for book in books:
-            title = book[1]
-            similar_books = self.get_similar_book(title, 5)
+            title = book[0]
+            similar_books = self.get_similar_book(title, 2)
             for similar_book, similarity in similar_books:
-               
                 new_cost = cost + int(similar_book["purchasePrice"])
-                if new_cost < int(budget):
+                if new_cost < int(budget) and similar_book not in book_list:
                     x.append(similar_book['title'])
                     y.append(similarity)
                     book_list.append(similar_book)
                     cost += int(similar_book["purchasePrice"])
         self.create_graph(x, y)
         return book_list, cost
+        
+    def rec_more_copies(self):
+        message = ""
+        books = self.parent.book_most_reserved()
+        return f"Book {books[0][0]} has {books[0][1]} reservations. You should buy more due to high demand!"
 
     def create_graph(self, x, y):
         plt.plot(x, y)
@@ -154,3 +161,4 @@ class Select(Database):
         plt.xticks(rotation=90)
         plt.tight_layout()
         plt.savefig('./assets/books_similarity.png')
+        plt.clf()

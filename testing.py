@@ -3,11 +3,12 @@ from book_search import Search
 from book_checkout import Checkout
 from book_return import Return
 from book_select import Select
-
+from datetime import date
+from dateutil.relativedelta import relativedelta
 db = Database()
-search = Search(db)
-checkout = Checkout(db)
-return_ = Return(db)
+#search = Search(db)
+#checkout = Checkout(db)
+#return_ = Return(db)
 select = Select(db)
 #print(search.book_title_search("Harry"))
 # print(checkout.is_book_valid(123))
@@ -20,3 +21,5 @@ select = Select(db)
 # print(select.get_similar_books('All the Light We Cannot See'))
 # blist, amount = select.recommend_books(200)
 # print(blist)
+
+select.rec_more_copies()

@@ -3,6 +3,7 @@
 # https://coolors.co/c9cad9-d1d2f9-a3bcf9-7796cb-576490
 #
 import tkinter as tk
+from tkinter.scrolledtext import ScrolledText
 from tkinter import (
     Toplevel,
     Frame,
@@ -13,6 +14,9 @@ from tkinter import (
     StringVar,
     Entry,
     Listbox,
+    Checkbutton,
+    IntVar,
+    Label,
 )
 
 from database import Database
@@ -21,6 +25,8 @@ from book_checkout import Checkout
 from book_return import Return
 from book_select import Select
 from PIL import Image, ImageTk
+from datetime import datetime, timedelta
+
 
 class MainWindow(Toplevel):
     def __init__(self, *args, **kwargs):
@@ -120,18 +126,35 @@ class MainWindow(Toplevel):
             relief="flat",
         )
         self.checkout_btn.place(x=6.0, y=310.0, width=200.0, height=50.0)
+        
+        # quit Button
+        self.button_image_6 = PhotoImage(file="./assets/button_quit.png")
+        self.checkout_btn = Button(
+            self.canvas,
+            image=self.button_image_6,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: self.quit_app(),
+            cursor="hand2",
+            activebackground="#5E95FF",
+            relief="flat",
+        )
+        self.checkout_btn.place(x=6.0, y=380.0, width=200.0, height=50.0)
 
         self.windows = {
             "home": HomeFrame(self),
             "search": SearchFrame(self),
             "return": ReturnFrame(self),
             "select": SelectFrame(self),
-            "checkout": CheckoutFrame(self),
+            "checkout": CheckoutFrame(self)
         }
 
         self.handle_btn_press("home")
 
         self.current_window.place(x=215, y=0, width=1013.0, height=506.0)
+    
+    def quit_app(self):
+        root.quit()
 
     def clear_listbox(self, listbox):
         listbox.delete("0", tk.END)
@@ -256,6 +279,7 @@ class SearchFrame(Frame):
     def __init__(self, parent, controller=None, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
         self.parent = parent
+        self.c_array = []
 
         self.canvas = Canvas(
             self,
@@ -282,6 +306,15 @@ class SearchFrame(Frame):
             fill="#3c7a89",
             font=("Open Sans", 15, "bold"),
         )
+
+        titlesv = StringVar()
+        titlesv.trace(
+            "w",
+            lambda name, index, mode, titlesv=titlesv: self.search(
+                self.title_entry.get(), self.author_entry.get()
+            ),
+        )
+
         self.title_entry = Entry(
             self.canvas,
             bd=0,
@@ -289,6 +322,7 @@ class SearchFrame(Frame):
             highlightthickness=0,
             font=("Open Sans", 15, "bold"),
             foreground="#16262e",
+            textvariable=titlesv,
         )
         self.title_entry.place(x=75.0, y=90.0, width=230, height=37)
 
@@ -300,6 +334,15 @@ class SearchFrame(Frame):
             fill="#3c7a89",
             font=("Open Sans", 15, "bold"),
         )
+
+        authorsv = StringVar()
+        authorsv.trace(
+            "w",
+            lambda name, index, mode, authorsv=authorsv: self.search(
+                self.title_entry.get(), self.author_entry.get()
+            ),
+        )
+
         self.author_entry = Entry(
             self.canvas,
             bd=0,
@@ -307,26 +350,39 @@ class SearchFrame(Frame):
             highlightthickness=0,
             font=("Open Sans", 15, "bold"),
             foreground="#16262e",
+            textvariable=authorsv,
         )
         self.author_entry.place(x=75.0, y=155.0, width=230, height=37)
 
-        self.listbox = Listbox(
-            self, width=60, height=20, activestyle="none", foreground="#3c7a89", bd=0
-        )
-        self.listbox.place(x=370.0, y=40.0)
+        # list of checkbox
+        self.text = ScrolledText(self, width=40, height=12, pady=60)
+        self.text.place(x=360.0, y=40.0)
 
-        self.button_image_1 = PhotoImage(file="./assets/button_clear.png")
+        self.button_image_3 = PhotoImage(file="./assets/button_clear_1.png")
         self.clear_btn = Button(
             self.canvas,
-            image=self.button_image_1,
+            image=self.button_image_3,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.parent.clear_listbox(self.listbox),
+            command=lambda: self.clear(),
             cursor="hand2",
             activebackground="#5E95FF",
             relief="flat",
         )
-        self.clear_btn.place(x=450.0, y=400.0, width=200.0, height=50.0)
+        self.clear_btn.place(x=600.0, y=380.0, width=100.0, height=50.0)
+
+        self.button_image_4 = PhotoImage(file="./assets/button_return_1.png")
+        self.return_btn = Button(
+            self.canvas,
+            image=self.button_image_4,
+            borderwidth=0,
+            highlightthickness=0,
+            command=lambda: self.do_returns(),
+            cursor="hand2",
+            activebackground="#5E95FF",
+            relief="flat",
+        )
+        self.return_btn.place(x=480.0, y=380.0, width=100.0, height=50.0)
 
         self.button_image_2 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
@@ -344,23 +400,64 @@ class SearchFrame(Frame):
         self.submit_btn.place(x=80.0, y=290.0, width=200.0, height=50.0)
 
         self.canvas.image_1 = PhotoImage(file="./assets/icon4.png")
-        self.canvas.create_image(190.0, 420.0, image=self.canvas.image_1)
+        self.canvas.create_image(190.0, 415.0, image=self.canvas.image_1)
+
+        self.statusvar = StringVar()
+        self.statusvar.set("Ready")
+        self.sbar = Label(
+            self, textvariable=self.statusvar, relief=tk.SUNKEN, anchor="w"
+        )
+        self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def search(self, title, author):
-        self.parent.clear_listbox(self.listbox)
+        self.clear()
+        books = None
         if title and author:
             books = self.parent.search.book_title_author_search(title, author)
             for book in books:
-                self.listbox.insert(tk.END, book[0])
+                self.add_item(book[0], book[1])
         elif title:
             books = self.parent.search.book_title_search(title)
             for book in books:
-                self.listbox.insert(tk.END, book[0])
+                self.add_item(book[0], book[1])
         elif author:
-            authors = self.parent.search.book_author_search(author)
-            for author in authors:
-                print(author[0])
-                self.listbox.insert(tk.END, author[0])
+            books = self.parent.search.book_author_search(author)
+            for book in books:
+                self.add_item(book[0], book[1])
+        if books:
+            self.statusvar.set(f"{len(books)} records have been found and returned.")
+            self.sbar.update()
+
+    def do_returns(self):
+        id_array = []
+        for var, book_id in self.c_array:
+            if var.get():
+                id_array.append(book_id)
+
+        if not id_array:
+            self.statusvar.set("Nothing has been selected.")
+            self.sbar.update()
+        else:
+            book_r, book_a = self.parent.return_.return_books(id_array)
+            self.statusvar.set(
+                f"RETURNED BOOK ID: {book_r} BOOK ID ALREADY AVAILABLE: {book_a}"
+            )
+            self.sbar.update()
+
+    def add_item(self, book_id, title):
+        is_checked = IntVar()
+        text = f"{book_id} - {title}"
+        button = Checkbutton(
+            self, text=text, bg="white", anchor="w", variable=is_checked, wraplength=300
+        )
+        self.text.window_create("end", window=button)
+        self.text.insert("end", "\n")
+        self.c_array.append((is_checked, book_id))
+
+    def clear(self):
+        self.text.delete("1.0", "end")
+        self.statusvar.set("List has been cleared.")
+        self.sbar.update()
 
 
 class ReturnFrame(Frame):
@@ -401,7 +498,7 @@ class ReturnFrame(Frame):
             font=("Open Sans", 15, "bold"),
             foreground="#16262e",
         )
-        self.book_entry.place(x=35.0, y=65.0, width=230, height=37)
+        self.book_entry.place(x=35.0, y=65.0, width=335, height=37)
 
         self.button_image_1 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
@@ -416,50 +513,45 @@ class ReturnFrame(Frame):
         )
         self.submit_btn.place(x=20.0, y=120.0, width=200.0, height=50.0)
 
-        self.entry_image_2 = PhotoImage(file="./assets/bg_2.png")
-        self.entry_bg_2 = self.canvas.create_image(
-            155.0, 380.0, image=self.entry_image_2
-        )
-
-        self.textbox = self.canvas.create_text(
-            40.0,
-            300.0,
-            anchor="nw",
-            text="",
-            fill="#FF0000",
-            width=250,
-            font=("Open Sans", 10, "bold"),
-        )
-
-        self.textbox1 = self.canvas.create_text(
-            40.0,
-            360.0,
-            anchor="nw",
-            text="",
-            fill="#FF0000",
-            width=250,
-            font=("Open Sans", 10, "bold"),
-        )
-
         self.canvas.image_1 = PhotoImage(file="./assets/icon3.png")
         self.canvas.create_image(600.0, 330.0, image=self.canvas.image_1)
 
+        self.statusvar = StringVar()
+        self.statusvar.set("Ready")
+        self.sbar = Label(
+            self, textvariable=self.statusvar, relief=tk.SUNKEN, anchor="w"
+        )
+        self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
+
     def return_book(self, book_id):
-        result, text = self.parent.return_.return_book(book_id)
-        self.canvas.itemconfigure(self.textbox1, text="")
-        if result:
-            self.canvas.itemconfigure(self.textbox, text=text, fill="#00FF00")
-            result, text = self.parent.return_.is_book_reserved(book_id)
-            if result:
-                self.canvas.itemconfigure(self.textbox1, text=text, fill="#FF0000")
+        if "," in book_id:
+            array_id = book_id.split(",")
+            book_r, book_a = self.parent.return_.return_books(array_id)
+            self.statusvar.set(
+                f"RETURNED BOOK ID: {book_r} BOOK ID ALREADY AVAILABLE: {book_a}"
+            )
+            self.sbar.update()
         else:
-            self.canvas.itemconfigure(self.textbox, text=text, fill="#00FF00")
+            returned, text = self.parent.return_.return_book(book_id)
+            if returned:
+                return_text = text
+                self.statusvar.set(return_text)
+                self.sbar.update()
+                is_reserved, text = self.parent.return_.is_book_reserved(book_id)
+                if is_reserved:
+                    reserved_text = text
+                    self.statusvar.set(f"{return_text}  {reserved_text}")
+                    self.sbar.update()
+            else:
+                self.statusvar.set(text)
+                self.sbar.update()
 
 
 class SelectFrame(Frame):
     def __init__(self, parent, controller=None, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
         self.parent = parent
+        self.graph = None
 
         self.canvas = Canvas(
             self,
@@ -494,12 +586,12 @@ class SelectFrame(Frame):
             font=("Open Sans", 15, "bold"),
             foreground="#16262e",
         )
-        self.budget_entry.place(x=35.0, y=65.0, width=230, height=37)
+        self.budget_entry.place(x=35.0, y=65.0, width=335, height=37)
 
-        self.listbox = Listbox(
-            self, width=50, height=20, activestyle="none", foreground="#3c7a89", bd=0
-        )
-        self.listbox.place(x=405.0, y=40.0)
+        # change this
+
+        self.text = ScrolledText(self, width=40, height=20)
+        self.text.place(x=400.0, y=40.0)
 
         self.button_image_1 = PhotoImage(file="./assets/button_clear.png")
         self.clear_btn = Button(
@@ -530,38 +622,36 @@ class SelectFrame(Frame):
         self.canvas.image_1 = PhotoImage(file="./assets/icon6.png")
         self.canvas.create_image(150.0, 400.0, image=self.canvas.image_1)
 
+        self.statusvar = StringVar()
+        self.statusvar.set("Ready")
+        self.sbar = Label(
+            self, textvariable=self.statusvar, relief=tk.SUNKEN, anchor="w"
+        )
+        self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
+
     def select(self, budget):
-        self.parent.clear_listbox(self.listbox)
-        book_list, cost = self.parent.select.recommend_books(budget)
-
-        if not hasattr(self, "text"):
-            self.text = self.canvas.create_text(
-                490.0,
-                370.0,
-                anchor="nw",
-                text=f"Total Cost £{cost}",
-                fill="#FF0000",
-                font=("Open Sans", 15, "bold"),
-            )
-
-        self.canvas.itemconfigure(self.text, text=f"Total Cost £{cost}")
+        self.clear()
+        book_list, cost = self.parent.select.recommend_new_books(budget)
+        msg_more_copies = self.parent.select.rec_more_copies()
+        msg = f'The total cost of the following {len(book_list)} books is £{cost}. '
+        
+        self.statusvar.set(msg + msg_more_copies)
+        self.sbar.update()
 
         for book in book_list:
-            string = f"{book['title']} by {book['authorName']} - {book['genre']}"
-            self.listbox.insert(tk.END, string)
-        
-        
+            string = f"{book['title']} by {book['authorName']} - {book['genre']} \n\n\n"
+            self.text.insert(tk.INSERT, string)
+
         image = Image.open("./assets/books_similarity.png")
- 
         resize_image = image.resize((250, 250))
- 
         self.canvas.image_2 = ImageTk.PhotoImage(resize_image)
-        
-        self.canvas.create_image(150.0, 350.0, image=self.canvas.image_2)
+        self.graph = self.canvas.create_image(150.0, 350.0, image=self.canvas.image_2)
 
     def clear(self):
-        self.parent.clear_listbox(self.listbox)
-        self.canvas.itemconfigure(self.text, text="")
+        self.canvas.delete(self.graph)
+        self.text.delete("1.0", "end")
+        self.statusvar.set("List has been cleared.")
+        self.sbar.update()
 
 
 class CheckoutFrame(Frame):
@@ -637,42 +727,67 @@ class CheckoutFrame(Frame):
         )
         self.submit_btn.place(x=80.0, y=290.0, width=200.0, height=50.0)
 
-        self.entry_image_2 = PhotoImage(file="./assets/bg_2.png")
-        self.entry_bg_2 = self.canvas.create_image(
-            600.0, 145.0, image=self.entry_image_2
-        )
-
-        self.textbox = self.canvas.create_text(
-            485.0,
-            150.0,
-            anchor="nw",
-            text="",
-            fill="#FF0000",
-            width=250,
-            font=("Open Sans", 10, "bold"),
-        )
-
         self.canvas.image_1 = PhotoImage(file="./assets/icon5.png")
         self.canvas.create_image(600.0, 400.0, image=self.canvas.image_1)
+
+        self.statusvar = StringVar()
+        self.statusvar.set("Ready")
+        self.sbar = Label(
+            self, textvariable=self.statusvar, relief=tk.SUNKEN, anchor="w"
+        )
+        self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def checkout(self, member_id, book_id):
         member_id, book_id = int(member_id), int(book_id)
         book_valid = self.parent.database.get_book_exist(book_id)
         member_valid = self.parent.checkout.is_member_valid(member_id)
-        self.canvas.itemconfigure(self.textbox, text="")
 
         if not member_valid:
-            self.canvas.itemconfigure(self.textbox, text="Member ID is invalid.")
+            self.statusvar.set("Member ID is invalid.")
+            self.sbar.update()
         elif not book_valid:
-            self.canvas.itemconfigure(self.textbox, text="Book ID is invalid.")
+            self.statusvar.set("Member ID is invalid.")
+            self.sbar.update()
         else:
             result, text = self.parent.checkout.withdraw(book_id, member_id)
             if result:
-                self.canvas.itemconfigure(self.textbox, text=text)
+                self.statusvar.set(text)
+                self.sbar.update()
             else:
                 # would you like to reserve a book?
-                self.canvas.itemconfigure(self.textbox, text=text)
+                self.statusvar.set(
+                    text
+                    + " Would you like to reserve a book? Type Yes or No into the textbox above the status bar."
+                )
+                self.sbar.update()
+                reservesv = StringVar()
+                reservesv.trace("w", lambda name, index, mode, reservesv=reservesv: self.reserve(book_id, member_id))
+                self.reserve_entry = Entry(
+                    self.canvas,
+                    bd=0,
+                    bg="#e3e3e3",
+                    highlightthickness=0,
+                    font=("Open Sans", 15, "bold"),
+                    foreground="#16262e",
+                    textvariable=reservesv
+                    
+                )
+                self.entry = self.reserve_entry.place(x=0.0, y=440.0, width=100, height=37)
 
+
+    def reserve(self, book_id, member_id):
+        text = self.reserve_entry.get()
+        if text.lower() == 'yes':
+            self.reserve_entry.place_forget()
+            today = datetime.today().strftime("%Y-%m-%d")
+            result, text = self.parent.checkout.reserve_book(book_id, member_id, today)
+            self.statusvar.set(text)
+            self.sbar.update()
+            
+        elif text.lower() == 'no':
+            self.reserve_entry.place_forget()
+            self.statusvar.set('Ready')
+            self.sbar.update()
 
 root = tk.Tk()
 root.withdraw()

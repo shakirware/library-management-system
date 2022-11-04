@@ -4,42 +4,22 @@ A simple library management system in Python.
 
 # TODO
 
-# library-management-system
-A simple library management system in Python.
-
-
-# TODO
-
 Unit Testing
-Visualise the recommendation list using Matplotlib.
-Revise reserve book function and add option to reserve book if book is not available.
 Finish Docstrings
 Change encoding 
-Fix UI input - input should be flashing. Potentially add a status bar at the bottom. Change colour of input in UI.
 
 
- key
-update search every
-make listbox with multiple lines oor more visible
-multiple return
-check books from search to return and checkout
+If you're the member that has currently loaned out a book, you shouldn't be able to reserve it.
 
+# DONE
 
-
-update popular book sql {
-
-SQL to get books that have been reserved the most
-
-SELECT bookCopiesID, COUNT(reservationDate) FROM loans GROUP BY bookCopiesID ORDER BY COUNT(reservationDate) ASC;
-
-Check books that checked out the most in last month or so
-
-SELECT bookCopiesID, COUNT(checkoutDate) from loans 
-WHERE checkoutDate >= '20-12-2022' 
-GROUP BY bookCopiesID
-ORDER BY COUNT(checkoutDate);
-
-
-
-}
+Update search on any entry in Search Frame.
+Checkboxes for every book and can now do multiple return in Search Frame.
+Added multiple return in Search Frame with commas.
+Added a Status Bar
+Made output more readable in Select Frame.
+Added reserve option if book is on loan.
+Popular books are now the books that have been checked out the most within the last 2 months.
+Added quit option
+Recommended getting more copies of a book.
 

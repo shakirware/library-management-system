@@ -70,10 +70,8 @@ class Checkout(Database):
 
         """
         dates = self.parent.get_book_reserved_member(book_id, member_id)
-        if dates:
-            if any(date[0] is None for date in dates):
-                pass
-            else:
-                return False, "Member already has a reservation."
-        self.parent.insert_loan(book_id, member_id, resv_date=resv_date)
-        return True, f"Reservation confirmed for {resv_date}"
+        if all(date[0] is None for date in dates) or not dates:
+            self.parent.insert_loan(book_id, member_id, resv_date=resv_date)
+        else:
+            return False, "Member already has a reservation."
+        return True, f"Reservation confirmed on {resv_date}"
