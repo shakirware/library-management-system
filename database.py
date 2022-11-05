@@ -1,6 +1,12 @@
+"""database.py
+
+This module allows the other modules to communicate
+back and forth with the SQLite database.
+
+"""
+
 import sqlite3
 import pandas as pd
-
 from data.constants import *
 
 
@@ -20,12 +26,14 @@ class Database:
         self.script = script
         self.connect()
 
-        with open(self.script, encoding='UTF-8') as sql:
+        with open(self.script, encoding="UTF-8") as sql:
             sql_script = sql.read()
             self.execute_script(sql_script)
 
         book_count = self.get_book_count()
-        if not book_count:
+        # If the book table is empty then all tables are empty
+        # therefore populate all tables.
+        if not book_count[0][0]:
             self.populate_loan_table()
             self.populate_book_table()
             self.populate_rec_table()
@@ -56,7 +64,7 @@ class Database:
 
         """
         books = []
-        with open(text_file, encoding='UTF-8') as file:
+        with open(text_file, encoding="UTF-8") as file:
             for line in file:
                 book_string = line.rstrip().split("|")
                 book = {
@@ -81,7 +89,7 @@ class Database:
 
         """
         loans = []
-        with open(text_file, encoding='UTF-8') as file:
+        with open(text_file, encoding="UTF-8") as file:
             for line in file:
                 loan_string = line.rstrip().split("|")
                 loan_string = list(
@@ -319,6 +327,22 @@ class Database:
             (book_id,),
         ).fetchall()
 
+    def get_book_return_date_member(self, book_id, member_id):
+        """Get return date of a book given a member_id.
+
+        Args:
+            book_id: The book's id.
+            member_id: The member's id.
+
+        Returns:
+            Return date of book.
+
+        """
+        return self.cursor.execute(
+            LOAN_RETURN_DATES_MEMBER_SQL,
+            (book_id, member_id),
+        ).fetchall()
+
     def get_book_copies_count(self):
         """Get a count of books in the bookCopies table.
 
@@ -366,6 +390,9 @@ class Database:
     def book_title_search_(self, book_title):
         """Search for a book title using wildcard.
 
+        Args:
+            book_title: The book's title.
+
         Returns:
             Rows returned from book search.
 
@@ -377,6 +404,9 @@ class Database:
 
     def book_author_search_(self, author):
         """Search for an author using wildcard.
+
+        Args:
+            author: The book's author.
 
         Returns:
             Rows returned from author search.
@@ -390,6 +420,10 @@ class Database:
     def book_title_author_search_(self, title, author):
         """Search for a book title and an author using wildcard.
 
+        Args:
+            title: The book's id.
+            author: The book's author.
+
         Returns:
             Rows returned from title and author search.
 
@@ -400,4 +434,10 @@ class Database:
         ).fetchall()
 
     def book_most_reserved(self):
+        """Search for the books that have been reserved the most.
+
+        Returns:
+            Rows returned with books that have been reserved the most.
+
+        """
         return self.cursor.execute(BOOK_MOST_RESERVED_SQL).fetchall()

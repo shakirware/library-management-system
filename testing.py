@@ -5,6 +5,8 @@ from book_return import Return
 from book_select import Select
 from datetime import date
 from dateutil.relativedelta import relativedelta
+
+
 db = Database()
 #search = Search(db)
 #checkout = Checkout(db)
@@ -22,4 +24,12 @@ select = Select(db)
 # blist, amount = select.recommend_books(200)
 # print(blist)
 
-select.rec_more_copies()
+#select.rec_more_copies()
+
+book_date = (date.today() + relativedelta(months=-1)).strftime("%Y-%m-%d")
+
+books = db.get_popular_books(book_date)[:5]
+title = 'Harry Potter Paperback Box Set (Books 1-7)'
+print(title)
+similar_books = select.get_similar_book(title, 5)
+print(similar_books)

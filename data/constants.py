@@ -12,6 +12,7 @@ BOOK_INFO_SQL = "SELECT book.title, authors.authorName, book.genre from book INN
 POPULAR_BOOK_SQL = "SELECT book.title from loans INNER JOIN bookCopies ON loans.bookCopiesID = bookCopies.id INNER JOIN book ON bookCopies.bookID = book.id WHERE loans.checkoutDate >= ? GROUP BY loans.bookCopiesID ORDER BY COUNT(loans.checkoutDate) DESC;"
 GET_RECOMMENDATIONS_SQL = "SELECT recommendations.id, authors.authorName, recommendations.genre, recommendations.title, recommendations.purchasePrice FROM recommendations INNER JOIN authors ON recommendations.authorID=authors.id"
 LOAN_RETURN_DATES_SQL = "SELECT returnDate from loans WHERE bookCopiesID = ?;"
+LOAN_RETURN_DATES_MEMBER_SQL = "SELECT returnDate, memberID from loans WHERE bookCopiesID = ? AND memberID = ?;"
 BOOK_RESERVED_SQL = "SELECT reservationDate from loans WHERE bookCopiesID = ?"
 BOOK_RESERVED_INFO_SQL = "SELECT reservationDate, memberid from loans WHERE bookCopiesID = ?;"
 BOOK_RESERVED_MEMBER_SQL = "SELECT reservationDate from loans WHERE bookCopiesID = ? AND memberid = ?;"
@@ -23,3 +24,4 @@ BOOK_TITLE_SEARCH_SQL = "SELECT bookCopies.id, book.title FROM bookCopies JOIN b
 BOOK_AUTHOR_SEARCH_SQL = "SELECT bookCopies.id, book.title FROM bookCopies JOIN book ON bookCopies.bookid = book.id JOIN authors ON book.authorid = authors.id WHERE authors.authorname LIKE ?" 
 BOOK_TITLE_AUTHOR_SEARCH_SQL = "SELECT bookCopies.id, book.title FROM bookCopies JOIN book ON bookCopies.bookid = book.id JOIN authors ON book.authorid = authors.id WHERE book.title LIKE ? AND authors.authorname LIKE ?"
 BOOK_MOST_RESERVED_SQL = "SELECT bookCopiesID, COUNT(reservationDate) FROM loans GROUP BY bookCopiesID ORDER BY COUNT(reservationDate) DESC;"
+

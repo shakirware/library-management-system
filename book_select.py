@@ -1,13 +1,20 @@
-from database import Database
+"""book_select.py
+
+This module recommends books for the librarian to purchase
+by accessing the recommendations table within the SQLite
+database.
+
+"""
+
+from datetime import date
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from datetime import date
 from dateutil.relativedelta import relativedelta
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
-class Select(Database):
+class Select:
     """This class contains methods to recommend books
     and genres for the Librarian.
 
@@ -16,14 +23,13 @@ class Select(Database):
         database: A dataframe containing the recommendation table.
 
     """
-    
+
     def __init__(self, parent):
         self.parent = parent
-        rec_table = self.parent.get_rec_table()
-        self.database = pd.DataFrame(rec_table)
+        self.database = pd.DataFrame(self.parent.get_rec_table())
 
     def get_similar_book(self, book_title, amount):
-        """Gets a list of similar books.
+        """Gets a list of similar books using cosine similarity.
 
         Args:
             book_title: The book's title.
@@ -63,7 +69,7 @@ class Select(Database):
 
     def create_count_matrix(self, features):
         """Creates a count matrix using CountVectorizer()
-        The text is counted to form a matrix. This method converts text data 
+        The text is counted to form a matrix. This method converts text data
         into numerical data.
 
         Args:
@@ -73,11 +79,11 @@ class Select(Database):
             A count matrix.
 
         """
-        cv = CountVectorizer()
-        return cv.fit_transform(features)
+        vectorizer = CountVectorizer()
+        return vectorizer.fit_transform(features)
 
     def get_cosine_similarity(self, count_matrix, index):
-        """Get the cosine similarity of an index within the count matrix. 
+        """Get the cosine similarity of an index within the count matrix.
 
         Args:
             count_matrix: A count matrix derived from book features.
@@ -92,8 +98,8 @@ class Select(Database):
         similar_books = list(enumerate(cosine_sim[index]))
         return sorted(similar_books, key=lambda x: x[1], reverse=True)
 
-    def get_index(self, book_title, df):
-        """Get the index of a book given the title. 
+    def get_index(self, book_title, dataframe):
+        """Get the index of a book given the title.
 
         Args:
             book_title: The book's title.
@@ -103,9 +109,9 @@ class Select(Database):
             The index of the book within the dataframe.
 
         """
-        return df.loc[df["title"] == book_title].index[0]
+        return dataframe.loc[dataframe["title"] == book_title].index[0]
 
-    def get_book_from_index(self, index, df):
+    def get_book_from_index(self, index, dataframe):
         """Get the book record given the index.
 
         Args:
@@ -116,7 +122,7 @@ class Select(Database):
             The record of the book within the dataframe.
 
         """
-        return df.loc[df.index == index].to_dict(orient="records")[0]
+        return dataframe.loc[dataframe.index == index].to_dict(orient="records")[0]
 
     def recommend_new_books(self, budget):
         """Get a list of books to recommend to the librarian,
@@ -124,16 +130,17 @@ class Select(Database):
 
         Args:
             budget: Maximum cost of all the books.
-           
+
         Returns:
             A list of books to recommend and the cost of them.
 
         """
-        x = []
-        y = []
+        graph_x = []
+        graph_y = []
         book_list = []
         cost = 0
-        book_date = (date.today() + relativedelta(months=-2)).strftime("%Y-%m-%d")
+        # Book_date represents 3 months ago today.
+        book_date = (date.today() + relativedelta(months=-3)).strftime("%Y-%m-%d")
         books = self.parent.get_popular_books(book_date)[:5]
         for book in books:
             title = book[0]
@@ -141,24 +148,43 @@ class Select(Database):
             for similar_book, similarity in similar_books:
                 new_cost = cost + int(similar_book["purchasePrice"])
                 if new_cost < int(budget) and similar_book not in book_list:
-                    x.append(similar_book['title'])
-                    y.append(similarity)
+                    # Only get the first word of a book title for x axis.
+                    graph_x.append(similar_book["title"].split(maxsplit=1)[0])
+                    graph_y.append(similarity)
                     book_list.append(similar_book)
                     cost += int(similar_book["purchasePrice"])
-        self.create_graph(x, y)
+        self.create_graph(graph_x, graph_y)
         return book_list, cost
-        
-    def rec_more_copies(self):
-        message = ""
-        books = self.parent.book_most_reserved()
-        return f"Book {books[0][0]} has {books[0][1]} reservations. You should buy more due to high demand!"
 
-    def create_graph(self, x, y):
-        plt.plot(x, y)
-        plt.title('Cosine similarity of books')
-        plt.xlabel('Book Title')
-        plt.ylabel('Similarity')
+    def rec_more_copies(self):
+        """Get the book that has the most reservations and
+        return a message recommending the librarian to get more
+        copies.
+
+        Returns:
+            A recommendation message string.
+
+        """
+        books = self.parent.book_most_reserved()
+        return (
+            f"Book {books[0][0]} has {books[0][1]} reservations."
+            "You should buy more due to high demand!"
+        )
+
+    def create_graph(self, x_axis, y_axis):
+        """Create a line graph showing the cosine similarity
+        of a recommended book and any current popular library books.
+
+        Args:
+            x: book title x axis
+            y: cosine similarity y axis
+
+        """
+        plt.plot(x_axis, y_axis)
+        plt.title("Cosine similarity of books")
+        plt.xlabel("Book Title")
+        plt.ylabel("Similarity")
         plt.xticks(rotation=90)
         plt.tight_layout()
-        plt.savefig('./assets/books_similarity.png')
+        plt.savefig("./assets/books_similarity.png")
         plt.clf()

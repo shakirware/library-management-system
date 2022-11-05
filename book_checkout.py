@@ -1,8 +1,14 @@
-from database import Database
-from datetime import datetime, timedelta
+"""book_checkout.py
+
+This module contains functionality to withdraw and reserve
+books from the library.
+
+"""
+
+from datetime import datetime
 
 
-class Checkout(Database):
+class Checkout:
     """This class contains methods used to check out a book from the library.
 
     Attributes:
@@ -38,11 +44,12 @@ class Checkout(Database):
             False if book doesn't exist or on loan.
 
         """
+        # Else statements are redundant but improve readability.
         book_exist = self.parent.get_book_exist(book_id)
         if book_exist:
             dates = self.parent.get_book_return_dates(book_id)
-            # If any returnDate is NULL then the book is still on loan
-            if not any(date[0] is None for date in dates): 
+            # If any of the returnDates are None then the book is still on loan.
+            if not any(date[0] is None for date in dates):
                 self.parent.insert_loan(
                     book_id,
                     member_id,
@@ -54,7 +61,6 @@ class Checkout(Database):
         else:
             return False, f" Book {book_id} does not exist."
 
-    # Improve function
     def reserve_book(self, book_id, member_id, resv_date):
         """Reserve a book for a member given a reservation date.
 
@@ -70,8 +76,14 @@ class Checkout(Database):
 
         """
         dates = self.parent.get_book_reserved_member(book_id, member_id)
+        # If member_id has not reserved a book before.
         if all(date[0] is None for date in dates) or not dates:
-            self.parent.insert_loan(book_id, member_id, resv_date=resv_date)
+            dates = self.parent.get_book_return_date_member(book_id, member_id)
+            # If member_id was the one who checked out the book.
+            if any(date[0] is None for date in dates):
+                return False, "Member has already checked out this book."
+            else:
+                self.parent.insert_loan(book_id, member_id, resv_date=resv_date)
         else:
-            return False, "Member already has a reservation."
+            return False, "Member already has a reservation for this book."
         return True, f"Reservation confirmed on {resv_date}"
