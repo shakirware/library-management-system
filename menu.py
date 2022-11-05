@@ -1,7 +1,17 @@
-# https://github.com/Just-Moh-it/HotinGo
-# https://www.clickminded.com/button-generator/
-# https://coolors.co/c9cad9-d1d2f9-a3bcf9-7796cb-576490
-#
+"""menu.py
+
+This module is used to display the graphical
+library interface. All the library modules are called
+from this module.
+
+I used https://www.clickminded.com/button-generator/ to
+generate the buttons for the user interface. I took inspiration
+from https://github.com/Just-Moh-it/HotinGo for the
+interface design and functionality. I used
+https://coolors.co/ to generate the colours.
+
+"""
+
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
 from tkinter import (
@@ -10,27 +20,38 @@ from tkinter import (
     Canvas,
     Button,
     PhotoImage,
-    messagebox,
     StringVar,
     Entry,
-    Listbox,
     Checkbutton,
     IntVar,
     Label,
 )
 
+from datetime import datetime
+from PIL import Image, ImageTk
 from database import Database
 from book_search import Search
 from book_checkout import Checkout
 from book_return import Return
 from book_select import Select
-from PIL import Image, ImageTk
-from datetime import datetime, timedelta
 
 
 class MainWindow(Toplevel):
-    def __init__(self, *args, **kwargs):
-        Toplevel.__init__(self, *args, **kwargs)
+    """This class represents the main window for
+    the library management system. It contains the
+    side panel and buttons.
+
+    Attributes:
+        database: The Database object.
+        search: The Search Object.
+        checkout: The Checkout Object.
+        return_: The Return Object.
+        select: The Select Object.
+
+    """
+
+    def __init__(self):
+        Toplevel.__init__(self)
 
         self.title("Library Management System")
         self.geometry("1012x506")
@@ -54,10 +75,10 @@ class MainWindow(Toplevel):
 
         self.canvas.place(x=0, y=0)
 
-        # Side panel
+        # Side panel.
         self.canvas.create_rectangle(215, 0.0, 1012.0, 506.0, outline="")
 
-        # Home Button
+        # Home Button.
         self.button_image_1 = PhotoImage(file="./assets/button_home.png")
         self.home_btn = Button(
             self.canvas,
@@ -71,7 +92,7 @@ class MainWindow(Toplevel):
         )
         self.home_btn.place(x=6.0, y=30.0, width=200.0, height=50.0)
 
-        # Search Button
+        # Search Button.
         self.button_image_2 = PhotoImage(file="./assets/button_search.png")
         self.search_btn = Button(
             self.canvas,
@@ -85,7 +106,7 @@ class MainWindow(Toplevel):
         )
         self.search_btn.place(x=6.0, y=100.0, width=200.0, height=50.0)
 
-        # Return Button
+        # Return Button.
         self.button_image_3 = PhotoImage(file="./assets/button_return.png")
         self.return_btn = Button(
             self.canvas,
@@ -99,7 +120,7 @@ class MainWindow(Toplevel):
         )
         self.return_btn.place(x=6.0, y=170.0, width=200.0, height=50.0)
 
-        # Select Button
+        # Select Button.
         self.button_image_4 = PhotoImage(file="./assets/button_select.png")
         self.select_btn = Button(
             self.canvas,
@@ -113,7 +134,7 @@ class MainWindow(Toplevel):
         )
         self.select_btn.place(x=6.0, y=240.0, width=200.0, height=50.0)
 
-        # checkout Button
+        # Checkout Button.
         self.button_image_5 = PhotoImage(file="./assets/button_checkout.png")
         self.checkout_btn = Button(
             self.canvas,
@@ -126,15 +147,15 @@ class MainWindow(Toplevel):
             relief="flat",
         )
         self.checkout_btn.place(x=6.0, y=310.0, width=200.0, height=50.0)
-        
-        # quit Button
+
+        # Quit Button.
         self.button_image_6 = PhotoImage(file="./assets/button_quit.png")
         self.checkout_btn = Button(
             self.canvas,
             image=self.button_image_6,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.quit_app(),
+            command=self.quit_app,
             cursor="hand2",
             activebackground="#5E95FF",
             relief="flat",
@@ -146,20 +167,32 @@ class MainWindow(Toplevel):
             "search": SearchFrame(self),
             "return": ReturnFrame(self),
             "select": SelectFrame(self),
-            "checkout": CheckoutFrame(self)
+            "checkout": CheckoutFrame(self),
         }
 
         self.handle_btn_press("home")
 
         self.current_window.place(x=215, y=0, width=1013.0, height=506.0)
-    
+
     def quit_app(self):
+        """Exit the application."""
         root.quit()
 
     def clear_listbox(self, listbox):
+        """Gets a list of similar books using cosine similarity.
+
+        Args:
+            book_title: The book's title.
+            amount: Number of books to be returned.
+        """
         listbox.delete("0", tk.END)
 
     def handle_btn_press(self, name):
+        """Switch the frame according to what button was pressed.
+
+        Args:
+            name: Name of the frame.
+        """
         # Hide all screens
         for window in self.windows.values():
             window.place_forget()
@@ -172,8 +205,8 @@ class MainWindow(Toplevel):
 
 
 class HomeFrame(Frame):
-    def __init__(self, parent, controller=None, *args, **kwargs):
-        Frame.__init__(self, parent, *args, **kwargs)
+    def __init__(self, parent):
+        Frame.__init__(self, parent)
         self.parent = parent
 
         self.canvas = Canvas(
@@ -276,8 +309,8 @@ class HomeFrame(Frame):
 
 
 class SearchFrame(Frame):
-    def __init__(self, parent, controller=None, *args, **kwargs):
-        Frame.__init__(self, parent, *args, **kwargs)
+    def __init__(self, parent):
+        Frame.__init__(self, parent)
         self.parent = parent
         self.c_array = []
 
@@ -364,7 +397,7 @@ class SearchFrame(Frame):
             image=self.button_image_3,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.clear(),
+            command=self.clear,
             cursor="hand2",
             activebackground="#5E95FF",
             relief="flat",
@@ -377,7 +410,7 @@ class SearchFrame(Frame):
             image=self.button_image_4,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.do_returns(),
+            command=self.do_returns,
             cursor="hand2",
             activebackground="#5E95FF",
             relief="flat",
@@ -461,8 +494,8 @@ class SearchFrame(Frame):
 
 
 class ReturnFrame(Frame):
-    def __init__(self, parent, controller=None, *args, **kwargs):
-        Frame.__init__(self, parent, *args, **kwargs)
+    def __init__(self, parent):
+        Frame.__init__(self, parent)
         self.parent = parent
 
         self.canvas = Canvas(
@@ -548,8 +581,8 @@ class ReturnFrame(Frame):
 
 
 class SelectFrame(Frame):
-    def __init__(self, parent, controller=None, *args, **kwargs):
-        Frame.__init__(self, parent, *args, **kwargs)
+    def __init__(self, parent):
+        Frame.__init__(self, parent)
         self.parent = parent
         self.graph = None
 
@@ -599,7 +632,7 @@ class SelectFrame(Frame):
             image=self.button_image_1,
             borderwidth=0,
             highlightthickness=0,
-            command=lambda: self.clear(),
+            command=self.clear,
             cursor="hand2",
             activebackground="#5E95FF",
             relief="flat",
@@ -633,8 +666,8 @@ class SelectFrame(Frame):
         self.clear()
         book_list, cost = self.parent.select.recommend_new_books(budget)
         msg_more_copies = self.parent.select.rec_more_copies()
-        msg = f'The total cost of the following {len(book_list)} books is £{cost}. '
-        
+        msg = f"The total cost of the following {len(book_list)} books is £{cost}. "
+
         self.statusvar.set(msg + msg_more_copies)
         self.sbar.update()
 
@@ -655,8 +688,8 @@ class SelectFrame(Frame):
 
 
 class CheckoutFrame(Frame):
-    def __init__(self, parent, controller=None, *args, **kwargs):
-        Frame.__init__(self, parent, *args, **kwargs)
+    def __init__(self, parent):
+        Frame.__init__(self, parent)
         self.parent = parent
 
         self.canvas = Canvas(
@@ -757,11 +790,16 @@ class CheckoutFrame(Frame):
                 # would you like to reserve a book?
                 self.statusvar.set(
                     text
-                    + " Would you like to reserve a book? Type Yes or No into the textbox above the status bar."
+                    + " Would you like to reserve a book? Type Yes or No into the textbox."
                 )
                 self.sbar.update()
                 reservesv = StringVar()
-                reservesv.trace("w", lambda name, index, mode, reservesv=reservesv: self.reserve(book_id, member_id))
+                reservesv.trace(
+                    "w",
+                    lambda name, index, mode, reservesv=reservesv: self.reserve(
+                        book_id, member_id
+                    ),
+                )
                 self.reserve_entry = Entry(
                     self.canvas,
                     bd=0,
@@ -769,25 +807,24 @@ class CheckoutFrame(Frame):
                     highlightthickness=0,
                     font=("Open Sans", 15, "bold"),
                     foreground="#16262e",
-                    textvariable=reservesv
-                    
+                    textvariable=reservesv,
                 )
-                self.entry = self.reserve_entry.place(x=0.0, y=440.0, width=100, height=37)
-
+                self.reserve_entry.place(x=0.0, y=440.0, width=100, height=37)
 
     def reserve(self, book_id, member_id):
         text = self.reserve_entry.get()
-        if text.lower() == 'yes':
+        if text.lower() == "yes":
             self.reserve_entry.place_forget()
             today = datetime.today().strftime("%Y-%m-%d")
             result, text = self.parent.checkout.reserve_book(book_id, member_id, today)
             self.statusvar.set(text)
             self.sbar.update()
-            
-        elif text.lower() == 'no':
+
+        elif text.lower() == "no":
             self.reserve_entry.place_forget()
-            self.statusvar.set('Ready')
+            self.statusvar.set("Ready")
             self.sbar.update()
+
 
 root = tk.Tk()
 root.withdraw()

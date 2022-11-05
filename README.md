@@ -3,18 +3,20 @@ A simple library management system in Python.
 
 
 # TODO
+If a book has been reserved then no one should be able to check it out once it's available again.
 
 Unit Testing
+
 Finish Docstrings
-Change encoding 
-Can't checkout a book that has been reserverd.
 
 book_select.py DONE
 database.py DONE
 book_checkout.py DONE
 book_search.py DONE
 book_return.py DONE
-4/6
+menu.py NOT DONE.
+5/6
+
 # DONE
 
 Update search on any entry in Search Frame.
