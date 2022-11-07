@@ -4,7 +4,7 @@ A simple library management system in Python.
 
 # TODO
 If a book has been reserved then no one should be able to check it out once it's available again.
-
+change colour of status bar
 Unit Testing
 
 Finish Docstrings

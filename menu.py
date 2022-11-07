@@ -205,6 +205,14 @@ class MainWindow(Toplevel):
 
 
 class HomeFrame(Frame):
+    """This class represents the Frame for the 
+    Home page within the graphical interface.
+
+    Attributes:
+        parent: Reference to the MainWindow object.
+        canvas: The Frame's canvas.
+
+    """
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.parent = parent
@@ -221,7 +229,7 @@ class HomeFrame(Frame):
 
         self.canvas.place(x=0, y=0)
 
-        # current book count
+        # Book count.
         self.canvas.image_1 = PhotoImage(file="./assets/bg_1.png")
         self.canvas.create_image(115.0, 81.0, image=self.canvas.image_1)
         self.canvas.create_text(
@@ -240,7 +248,7 @@ class HomeFrame(Frame):
             fill="#16262e",
             font=("Open Sans", 30, "bold"),
         )
-        # books on loan
+        # Books on loan.
         self.canvas.create_image(299.0, 81.0, image=self.canvas.image_1)
         self.canvas.create_text(
             240.0,
@@ -258,7 +266,7 @@ class HomeFrame(Frame):
             fill="#16262e",
             font=("Open Sans", 30, "bold"),
         )
-        # reserved books
+        # Reserved books.
         self.canvas.create_image(483.0, 81.0, image=self.canvas.image_1)
         self.canvas.create_text(
             424.0,
@@ -276,7 +284,7 @@ class HomeFrame(Frame):
             fill="#16262e",
             font=("Open Sans", 30, "bold"),
         )
-        # unique books
+        # Unique Books.
         self.canvas.create_image(667.0, 81.0, image=self.canvas.image_1)
         self.canvas.create_text(
             608.0,
@@ -295,20 +303,29 @@ class HomeFrame(Frame):
             font=("Open Sans", 30, "bold"),
         )
 
-        # icon 1
+        # Icon 1.
         self.canvas.image_2 = PhotoImage(file="./assets/icon.png")
         self.canvas.create_image(670.0, 330.0, image=self.canvas.image_2)
 
-        # icon 2
+        # Icon 2.
         self.canvas.image_3 = PhotoImage(file="./assets/icon1.png")
         self.canvas.create_image(140.0, 330.0, image=self.canvas.image_3)
 
-        # icon 3
+        # Icon 3.
         self.canvas.image_4 = PhotoImage(file="./assets/icon2.png")
         self.canvas.create_image(390.0, 330.0, image=self.canvas.image_4)
 
 
 class SearchFrame(Frame):
+    """This class represents the Frame for the 
+    Search page within the graphical interface.
+
+    Attributes:
+        parent: Reference to the MainWindow object.
+        canvas: The Frame's canvas.
+        c_array: Array to store the checked books.
+
+    """
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.parent = parent
@@ -326,11 +343,11 @@ class SearchFrame(Frame):
 
         self.canvas.place(x=0, y=0)
 
+        # Book Title.
         self.entry_image_1 = PhotoImage(file="./assets/bg_2.png")
         self.entry_bg_1 = self.canvas.create_image(
             180.0, 150.0, image=self.entry_image_1
         )
-
         self.canvas.create_text(
             75.0,
             65.0,
@@ -339,7 +356,8 @@ class SearchFrame(Frame):
             fill="#3c7a89",
             font=("Open Sans", 15, "bold"),
         )
-
+        
+        # Track title contents.
         titlesv = StringVar()
         titlesv.trace(
             "w",
@@ -347,7 +365,7 @@ class SearchFrame(Frame):
                 self.title_entry.get(), self.author_entry.get()
             ),
         )
-
+        # Title Entry.
         self.title_entry = Entry(
             self.canvas,
             bd=0,
@@ -367,7 +385,8 @@ class SearchFrame(Frame):
             fill="#3c7a89",
             font=("Open Sans", 15, "bold"),
         )
-
+        
+        # Track author contents.
         authorsv = StringVar()
         authorsv.trace(
             "w",
@@ -375,7 +394,7 @@ class SearchFrame(Frame):
                 self.title_entry.get(), self.author_entry.get()
             ),
         )
-
+        # Author Entry.
         self.author_entry = Entry(
             self.canvas,
             bd=0,
@@ -387,10 +406,11 @@ class SearchFrame(Frame):
         )
         self.author_entry.place(x=75.0, y=155.0, width=230, height=37)
 
-        # list of checkbox
+        # ScrolledText widget to store checkButtons.
         self.text = ScrolledText(self, width=40, height=12, pady=60)
         self.text.place(x=360.0, y=40.0)
 
+        # Clear button.
         self.button_image_3 = PhotoImage(file="./assets/button_clear_1.png")
         self.clear_btn = Button(
             self.canvas,
@@ -403,7 +423,7 @@ class SearchFrame(Frame):
             relief="flat",
         )
         self.clear_btn.place(x=600.0, y=380.0, width=100.0, height=50.0)
-
+        # Return Button
         self.button_image_4 = PhotoImage(file="./assets/button_return_1.png")
         self.return_btn = Button(
             self.canvas,
@@ -416,7 +436,7 @@ class SearchFrame(Frame):
             relief="flat",
         )
         self.return_btn.place(x=480.0, y=380.0, width=100.0, height=50.0)
-
+        # Submit Button
         self.button_image_2 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
             self.canvas,
@@ -434,7 +454,8 @@ class SearchFrame(Frame):
 
         self.canvas.image_1 = PhotoImage(file="./assets/icon4.png")
         self.canvas.create_image(190.0, 415.0, image=self.canvas.image_1)
-
+        
+        # Status bar
         self.statusvar = StringVar()
         self.statusvar.set("Ready")
         self.sbar = Label(
@@ -443,6 +464,13 @@ class SearchFrame(Frame):
         self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def search(self, title, author):
+        """Search for a book given a title and an author then
+        update the graphical interface.
+
+        Args:
+            title: The book's title.
+            author: The book's author.
+        """
         self.clear()
         books = None
         if title and author:
@@ -462,11 +490,12 @@ class SearchFrame(Frame):
             self.sbar.update()
 
     def do_returns(self):
+        """Return the books that have been checked by the user."""
         id_array = []
         for var, book_id in self.c_array:
             if var.get():
                 id_array.append(book_id)
-
+        # If nothing has been selected.
         if not id_array:
             self.statusvar.set("Nothing has been selected.")
             self.sbar.update()
@@ -478,6 +507,12 @@ class SearchFrame(Frame):
             self.sbar.update()
 
     def add_item(self, book_id, title):
+        """Add book to the Scrollable list with a CheckButton.
+
+        Args:
+            book_id: The book's ID.
+            title: The book's title.
+        """
         is_checked = IntVar()
         text = f"{book_id} - {title}"
         button = Checkbutton(
@@ -488,12 +523,21 @@ class SearchFrame(Frame):
         self.c_array.append((is_checked, book_id))
 
     def clear(self):
+        """Remove all contents from the List and StatusBar."""
         self.text.delete("1.0", "end")
         self.statusvar.set("List has been cleared.")
         self.sbar.update()
 
 
 class ReturnFrame(Frame):
+    """This class represents the Frame for the 
+    Return page within the graphical interface.
+
+    Attributes:
+        parent: Reference to the MainWindow object.
+        canvas: The Frame's canvas.
+
+    """
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.parent = parent
@@ -510,11 +554,11 @@ class ReturnFrame(Frame):
 
         self.canvas.place(x=0, y=0)
 
+        # Book Id.
         self.entry_image_1 = PhotoImage(file="./assets/entry_1.png")
         self.entry_bg_1 = self.canvas.create_image(
             200.0, 70.0, image=self.entry_image_1
         )
-
         self.canvas.create_text(
             45.0,
             40.0,
@@ -523,6 +567,7 @@ class ReturnFrame(Frame):
             fill="#3c7a89",
             font=("Open Sans", 15, "bold"),
         )
+        # Book ID Entry.
         self.book_entry = Entry(
             self.canvas,
             bd=0,
@@ -532,7 +577,7 @@ class ReturnFrame(Frame):
             foreground="#16262e",
         )
         self.book_entry.place(x=35.0, y=65.0, width=335, height=37)
-
+        # Submit Button.
         self.button_image_1 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
             self.canvas,
@@ -548,7 +593,7 @@ class ReturnFrame(Frame):
 
         self.canvas.image_1 = PhotoImage(file="./assets/icon3.png")
         self.canvas.create_image(600.0, 330.0, image=self.canvas.image_1)
-
+        # Status Bar.
         self.statusvar = StringVar()
         self.statusvar.set("Ready")
         self.sbar = Label(
@@ -557,6 +602,12 @@ class ReturnFrame(Frame):
         self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def return_book(self, book_id):
+        """Return one or more books to the library and update
+        the graphical interface.
+
+        Args:
+            book_id: The book's ID.
+        """
         if "," in book_id:
             array_id = book_id.split(",")
             book_r, book_a = self.parent.return_.return_books(array_id)
@@ -581,6 +632,15 @@ class ReturnFrame(Frame):
 
 
 class SelectFrame(Frame):
+    """This class represents the Frame for the 
+    Select page within the graphical interface.
+
+    Attributes:
+        parent: Reference to the MainWindow object.
+        canvas: The Frame's canvas.
+        graph: A matplotlib graph.
+
+    """
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.parent = parent
@@ -597,12 +657,12 @@ class SelectFrame(Frame):
         )
 
         self.canvas.place(x=0, y=0)
-
+        
+        #Insert Budget Entry 
         self.entry_image_1 = PhotoImage(file="./assets/entry_1.png")
         self.entry_bg_1 = self.canvas.create_image(
             200.0, 70.0, image=self.entry_image_1
         )
-
         self.canvas.create_text(
             45.0,
             40.0,
@@ -621,11 +681,10 @@ class SelectFrame(Frame):
         )
         self.budget_entry.place(x=35.0, y=65.0, width=335, height=37)
 
-        # change this
-
+        # Scrolled List 
         self.text = ScrolledText(self, width=40, height=20)
         self.text.place(x=400.0, y=40.0)
-
+        # Clear Button
         self.button_image_1 = PhotoImage(file="./assets/button_clear.png")
         self.clear_btn = Button(
             self.canvas,
@@ -638,7 +697,7 @@ class SelectFrame(Frame):
             relief="flat",
         )
         self.clear_btn.place(x=450.0, y=400.0, width=200.0, height=50.0)
-
+        # Submit Button
         self.button_image_2 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
             self.canvas,
@@ -654,7 +713,7 @@ class SelectFrame(Frame):
 
         self.canvas.image_1 = PhotoImage(file="./assets/icon6.png")
         self.canvas.create_image(150.0, 400.0, image=self.canvas.image_1)
-
+        # Status Bar
         self.statusvar = StringVar()
         self.statusvar.set("Ready")
         self.sbar = Label(
@@ -663,11 +722,17 @@ class SelectFrame(Frame):
         self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def select(self, budget):
+        """Get the recommended books and update the graphical
+        interface with them.
+
+        Args:
+            budget: The maximum cost of the recommended books.
+        """
         self.clear()
         book_list, cost = self.parent.select.recommend_new_books(budget)
         msg_more_copies = self.parent.select.rec_more_copies()
         msg = f"The total cost of the following {len(book_list)} books is £{cost}. "
-
+        # Update status bar 
         self.statusvar.set(msg + msg_more_copies)
         self.sbar.update()
 
@@ -681,6 +746,7 @@ class SelectFrame(Frame):
         self.graph = self.canvas.create_image(150.0, 350.0, image=self.canvas.image_2)
 
     def clear(self):
+        """Clear the graph, scrollable list and status bar."""
         self.canvas.delete(self.graph)
         self.text.delete("1.0", "end")
         self.statusvar.set("List has been cleared.")
@@ -688,6 +754,14 @@ class SelectFrame(Frame):
 
 
 class CheckoutFrame(Frame):
+    """This class represents the Frame for the 
+    Checkout page within the graphical interface.
+
+    Attributes:
+        parent: Reference to the MainWindow object.
+        canvas: The Frame's canvas.
+
+    """
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.parent = parent
@@ -703,12 +777,11 @@ class CheckoutFrame(Frame):
         )
 
         self.canvas.place(x=0, y=0)
-
+        # Member ID.
         self.entry_image_1 = PhotoImage(file="./assets/bg_2.png")
         self.entry_bg_1 = self.canvas.create_image(
             180.0, 150.0, image=self.entry_image_1
         )
-
         self.canvas.create_text(
             75.0,
             65.0,
@@ -726,7 +799,7 @@ class CheckoutFrame(Frame):
             foreground="#16262e",
         )
         self.member_entry.place(x=75.0, y=90.0, width=230, height=37)
-
+        # Book ID.
         self.canvas.create_text(
             75.0,
             130.0,
@@ -744,7 +817,7 @@ class CheckoutFrame(Frame):
             foreground="#16262e",
         )
         self.book_entry.place(x=75.0, y=155.0, width=230, height=37)
-
+        # Submit Button.
         self.button_image_2 = PhotoImage(file="./assets/button_submit.png")
         self.submit_btn = Button(
             self.canvas,
@@ -762,7 +835,7 @@ class CheckoutFrame(Frame):
 
         self.canvas.image_1 = PhotoImage(file="./assets/icon5.png")
         self.canvas.create_image(600.0, 400.0, image=self.canvas.image_1)
-
+        # Status Bar.
         self.statusvar = StringVar()
         self.statusvar.set("Ready")
         self.sbar = Label(
@@ -771,6 +844,13 @@ class CheckoutFrame(Frame):
         self.sbar.pack(side=tk.BOTTOM, fill=tk.X)
 
     def checkout(self, member_id, book_id):
+        """Checkout a book given a member id and book id then
+        update the graphical interface.
+
+        Args:
+            member_id: The member's ID.
+            book_id: The book's ID.
+        """
         member_id, book_id = int(member_id), int(book_id)
         book_valid = self.parent.database.get_book_exist(book_id)
         member_valid = self.parent.checkout.is_member_valid(member_id)
@@ -787,7 +867,6 @@ class CheckoutFrame(Frame):
                 self.statusvar.set(text)
                 self.sbar.update()
             else:
-                # would you like to reserve a book?
                 self.statusvar.set(
                     text
                     + " Would you like to reserve a book? Type Yes or No into the textbox."
@@ -812,6 +891,13 @@ class CheckoutFrame(Frame):
                 self.reserve_entry.place(x=0.0, y=440.0, width=100, height=37)
 
     def reserve(self, book_id, member_id):
+        """Reserve a book given a book id and a member id then
+        update the graphical interface.
+
+        Args:
+            book_id: The book's ID.
+            member_id: The member's ID.
+        """
         text = self.reserve_entry.get()
         if text.lower() == "yes":
             self.reserve_entry.place_forget()
