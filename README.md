@@ -28,5 +28,3 @@ A library management system in Python utilizing machine learning and an SQLite3 
 # Screenshots
 
 ![Screenshot](/assets/screenshots/home.png)
-
-![Screenshot](/assets/screenshots/select.png)
