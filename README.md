@@ -24,3 +24,6 @@ A library management system in Python utilizing machine learning and an SQLite3 
 - Display a graph with cosine similarity of the recommended books to the library's current popular books.
 - Mock data generation scripts and parsing.
 - Normalised SQL tables within data/create.sql.
+
+# Screenshots
+
