@@ -1,20 +1,25 @@
 import unittest
+from database import Database
+from book_search import Search
+from book_checkout import Checkout
+from book_return import Return
+from book_select import Select
 
-class TestStringMethods(unittest.TestCase):
+class BasicLibraryTests(unittest.TestCase):
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+    def setUp(self):
+        self.database = Database()
+        self.search = Search(self.database)
+        self.checkout = Checkout(self.database)
+        self.return_ = Return(self.database)
+        self.select = Select(self.database)
+        
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
-
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
+    def test_search_book(self):
+        # Test search function by searching for the book 'If I Stay'.
+        # [(181, 'If I Stay')]
+        book = self.search.book_title_search('If I Stay')[0][1]
+        self.assertEqual(book, 'If I Stay')
 
 if __name__ == '__main__':
     unittest.main()

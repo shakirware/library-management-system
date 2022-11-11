@@ -1,30 +1,26 @@
 # library-management-system
-A simple library management system in Python.
+A library management system in Python utilizing machine learning and an SQLite3 database.
 
+# Basic Features 
 
-# TODO
-If a book has been reserved then no one should be able to check it out once it's available again.
-change colour of status bar
-Unit Testing
+- Search for a book using a book title, author name or both.
+- Checkout or reserve a book.
+- Return a book to the library.
+- Machine learning algorithm to recommend new books for the library based on the current most popular book.
 
-Finish Docstrings
+# ToDo
 
-book_select.py DONE
-database.py DONE
-book_checkout.py DONE
-book_search.py DONE
-book_return.py DONE
-menu.py NOT DONE.
-5/6
+- Complete Unit Testing. (unit_testing.py)
 
-# DONE
+# Nice Features
 
-Update search on any entry in Search Frame.
-Checkboxes for every book and can now do multiple return in Search Frame.
-Added multiple return in Search Frame with commas.
-Added a Status Bar
-Made output more readable in Select Frame.
-Added reserve option if book is on loan.
-Popular books are now the books that have been checked out the most within the last 2 months.
-Added quit option
-Recommended getting more copies of a book.
+- Search automatically updates with every key entry. 
+- Checkboxes for every book in the search, a book can be checked then an action can be performed on it.
+- Multiple books can be returned at once using a comma with the book ids e.g 3,5,6.
+- Status bar to deliver basic output.
+- Reserve option for if a book is currently on loan.
+- Calculate the current popular books by finding out the books that have been checked out the most in the last 2 months.
+- Recommend getting more copies of a book if it has multiple reservations.
+- Display a graph with cosine similarity of the recommended books to the library's current popular books.
+- Mock data generation scripts and parsing.
+- Normalised SQL tables within data/create.sql.
