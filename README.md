@@ -10,7 +10,7 @@ A library management system in Python utilizing machine learning and an SQLite3 
 
 # ToDo
 
-- Complete Unit Testing. (unit_testing.py)
+- Add more unit tests. (unit_testing.py)
 
 # Nice Features
 
